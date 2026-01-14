@@ -1,8 +1,8 @@
 import type { default as Transport } from '@ledgerhq/hw-transport';
 import { StatusCodes, TransportStatusError } from '@ledgerhq/hw-transport';
-import { isVersionedTransaction } from '@solana/wallet-adapter-base';
-import type { Transaction, VersionedTransaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+import { isVersionedTransaction } from '@trezoa/wallet-adapter-base';
+import type { Transaction, VersionedTransaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 import './polyfills/index.js';
 
 export function getDerivationPath(account?: number, change?: number): Buffer {
@@ -11,7 +11,7 @@ export function getDerivationPath(account?: number, change?: number): Buffer {
 
     let offset = derivationPath.writeUInt8(length, 0);
     offset = derivationPath.writeUInt32BE(harden(44), offset); // Using BIP44
-    offset = derivationPath.writeUInt32BE(harden(501), offset); // Solana's BIP44 path
+    offset = derivationPath.writeUInt32BE(harden(501), offset); // Trezoa's BIP44 path
 
     if (account !== undefined) {
         offset = derivationPath.writeUInt32BE(harden(account), offset);

@@ -6,7 +6,7 @@ import {
     WalletDisconnectButton,
     WalletModalButton,
     WalletMultiButton,
-} from '@solana/wallet-adapter-react-ui';
+} from '@trezoa/wallet-adapter-react-ui';
 
 import pkg from '../../package.json';
 import { SendLegacyTransaction } from '../components/SendLegacyTransaction';

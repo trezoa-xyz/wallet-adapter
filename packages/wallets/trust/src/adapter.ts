@@ -1,4 +1,4 @@
-import type { EventEmitter, SendTransactionOptions, WalletName } from '@solana/wallet-adapter-base';
+import type { EventEmitter, SendTransactionOptions, WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -14,9 +14,9 @@ import {
     WalletSendTransactionError,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Connection, SendOptions, Transaction, TransactionSignature } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Connection, SendOptions, Transaction, TransactionSignature } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface TrustWalletEvents {
     connect(...args: unknown[]): unknown;
@@ -40,7 +40,7 @@ interface TrustWallet extends EventEmitter<TrustWalletEvents> {
 
 interface TrustWindow extends Window {
     trustwallet?: {
-        solana?: TrustWallet;
+        trezoa?: TrustWallet;
     };
 }
 
@@ -73,7 +73,7 @@ export class TrustWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.trustwallet?.solana?.isTrust) {
+                if (window.trustwallet?.trezoa?.isTrust) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -107,7 +107,7 @@ export class TrustWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.trustwallet!.solana!;
+            const wallet = window.trustwallet!.trezoa!;
 
             if (!wallet.isConnected) {
                 try {

@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-hyperpay`
+# `@trezoa/wallet-adapter-hyperpay`
 
 <!-- @TODO -->
 

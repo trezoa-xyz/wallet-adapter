@@ -1,4 +1,4 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -10,9 +10,9 @@ import {
     WalletReadyState,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface OntoWallet {
     isONTO?: boolean;
@@ -27,7 +27,7 @@ interface OntoWallet {
 
 interface OntoWindow extends Window {
     onto?: {
-        solana?: OntoWallet;
+        trezoa?: OntoWallet;
     };
 }
 
@@ -59,7 +59,7 @@ export class OntoWalletAdapter extends BaseMessageSignerWalletAdapter {
         this._publicKey = null;
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.onto?.solana?.isONTO) {
+                if (window.onto?.trezoa?.isONTO) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -93,7 +93,7 @@ export class OntoWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window!.onto!.solana!;
+            const wallet = window!.onto!.trezoa!;
 
             let account: string;
             try {

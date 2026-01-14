@@ -38,7 +38,7 @@ export function useNotify() {
                 <Notification>
                     {message}
                     {signature && (
-                        <StyledLink href={`https://explorer.solana.com/tx/${signature}?cluster=devnet`} target="_blank">
+                        <StyledLink href={`https://explorer.trezoa.com/tx/${signature}?cluster=devnet`} target="_blank">
                             Transaction
                             <StyledLaunchIcon />
                         </StyledLink>

@@ -1,8 +1,8 @@
 {
     "private": true,
-    "name": "@solana/wallet-adapter",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "name": "@trezoa/wallet-adapter",
+    "author": "Trezoa Maintainers <maintainers@trezoa.foundation>",
+    "repository": "https://github.com/trezoa-xyz/wallet-adapter",
     "license": "Apache-2.0",
     "engines": {
         "node": ">=20",
@@ -52,13 +52,13 @@
         "vm-browserify": "^1.1.2"
     },
     "overrides": {
-        "@solana/wallet-adapter-base": "workspace:^",
+        "@trezoa/wallet-adapter-base": "workspace:^",
         "eslint": "8.22.0",
         "@ngraveio/bc-ur": "1.1.12",
         "@types/web": "npm:typescript@^5.8.3"
     },
     "resolutions": {
-        "@solana/wallet-adapter-base": "workspace:^",
+        "@trezoa/wallet-adapter-base": "workspace:^",
         "eslint": "8.22.0",
         "@ngraveio/bc-ur": "1.1.12",
         "@types/web": "npm:typescript@^5.8.3"

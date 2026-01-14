@@ -1,4 +1,4 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -9,9 +9,9 @@ import {
     WalletReadyState,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface CloverWallet {
     isCloverWallet?: boolean;
@@ -22,7 +22,7 @@ interface CloverWallet {
 }
 
 interface CloverWalletWindow extends Window {
-    clover_solana?: CloverWallet;
+    clover_trezoa?: CloverWallet;
 }
 
 declare const window: CloverWalletWindow;
@@ -54,7 +54,7 @@ export class CloverWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.clover_solana?.isCloverWallet) {
+                if (window.clover_trezoa?.isCloverWallet) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -84,7 +84,7 @@ export class CloverWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.clover_solana!;
+            const wallet = window.clover_trezoa!;
 
             let account: string;
             try {

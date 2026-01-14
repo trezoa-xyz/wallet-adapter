@@ -1,15 +1,15 @@
 import { ed25519 } from '@noble/curves/ed25519';
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseSignInMessageSignerWalletAdapter,
     isVersionedTransaction,
     WalletNotConnectedError,
     WalletReadyState,
-} from '@solana/wallet-adapter-base';
-import { type SolanaSignInInput, type SolanaSignInOutput } from '@solana/wallet-standard-features';
-import { createSignInMessage } from '@solana/wallet-standard-util';
-import type { Transaction, TransactionVersion, VersionedTransaction } from '@solana/web3.js';
-import { Keypair } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import { type TrezoaSignInInput, type TrezoaSignInOutput } from '@trezoa/wallet-standard-features';
+import { createSignInMessage } from '@trezoa/wallet-standard-util';
+import type { Transaction, TransactionVersion, VersionedTransaction } from '@trezoa/web3.js';
+import { Keypair } from '@trezoa/web3.js';
 
 export const UnsafeBurnerWalletName = 'Burner Wallet' as WalletName<'Burner Wallet'>;
 
@@ -19,7 +19,7 @@ export const UnsafeBurnerWalletName = 'Burner Wallet' as WalletName<'Burner Wall
  */
 export class UnsafeBurnerWalletAdapter extends BaseSignInMessageSignerWalletAdapter {
     name = UnsafeBurnerWalletName;
-    url = 'https://github.com/anza-xyz/wallet-adapter#usage';
+    url = 'https://github.com/trezoa-xyz/wallet-adapter#usage';
     icon =
         'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iMzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zNCAxMC42djIuN2wtOS41IDE2LjVoLTQuNmw2LTEwLjVhMi4xIDIuMSAwIDEgMCAyLTMuNGw0LjgtOC4zYTQgNCAwIDAgMSAxLjMgM1ptLTQuMyAxOS4xaC0uNmw0LjktOC40djQuMmMwIDIuMy0yIDQuMy00LjMgNC4zWm0yLTI4LjRjLS4zLS44LTEtMS4zLTItMS4zaC0xLjlsLTIuNCA0LjNIMzBsMS43LTNabS0zIDVoLTQuNkwxMC42IDI5LjhoNC43TDI4LjggNi40Wk0xOC43IDBoNC42bC0yLjUgNC4zaC00LjZMMTguNiAwWk0xNSA2LjRoNC42TDYgMjkuOEg0LjJjLS44IDAtMS43LS4zLTIuNC0uOEwxNSA2LjRaTTE0IDBIOS40TDcgNC4zaDQuNkwxNCAwWm0tMy42IDYuNEg1LjdMMCAxNi4ydjhMMTAuMyA2LjRaTTQuMyAwaC40TDAgOC4ydi00QzAgMiAxLjkgMCA0LjMgMFoiIGZpbGw9IiM5OTQ1RkYiLz48L3N2Zz4=';
     supportedTransactionVersions: ReadonlySet<TransactionVersion> = new Set(['legacy', 0]);
@@ -36,7 +36,7 @@ export class UnsafeBurnerWalletAdapter extends BaseSignInMessageSignerWalletAdap
             'Your application is presently configured to use the `UnsafeBurnerWalletAdapter`. ' +
                 'Find and remove it, then replace it with a list of adapters for ' +
                 'wallets you would like your application to support. See ' +
-                'https://github.com/anza-xyz/wallet-adapter#usage for an example.'
+                'https://github.com/trezoa-xyz/wallet-adapter#usage for an example.'
         );
     }
 
@@ -80,7 +80,7 @@ export class UnsafeBurnerWalletAdapter extends BaseSignInMessageSignerWalletAdap
         return ed25519.sign(message, this._keypair.secretKey.slice(0, 32));
     }
 
-    async signIn(input: SolanaSignInInput = {}): Promise<SolanaSignInOutput> {
+    async signIn(input: TrezoaSignInInput = {}): Promise<TrezoaSignInOutput> {
         const { publicKey, secretKey } = (this._keypair ||= new Keypair());
         const domain = input.domain || window.location.host;
         const address = input.address || publicKey.toBase58();

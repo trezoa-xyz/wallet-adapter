@@ -1,8 +1,8 @@
-# Wallet Adapter for Solana Apps
+# Wallet Adapter for Trezoa Apps
 
-This is a quick setup guide with examples of how to add Wallet Adapter to a React-based Solana app.
+This is a quick setup guide with examples of how to add Wallet Adapter to a React-based Trezoa app.
 
-See the [packages](https://github.com/anza-xyz/wallet-adapter/blob/master/PACKAGES.md) and [FAQ](https://github.com/anza-xyz/wallet-adapter/blob/master/FAQ.md) for other supported frontend frameworks.
+See the [packages](https://github.com/trezoa-xyz/wallet-adapter/blob/master/PACKAGES.md) and [FAQ](https://github.com/trezoa-xyz/wallet-adapter/blob/master/FAQ.md) for other supported frontend frameworks.
 
 ## Quick Setup (using React)
 
@@ -12,11 +12,11 @@ Install these dependencies:
 
 ```shell
 npm install --save \
-    @solana/wallet-adapter-base \
-    @solana/wallet-adapter-react \
-    @solana/wallet-adapter-react-ui \
-    @solana/wallet-adapter-wallets \
-    @solana/web3.js \
+    @trezoa/wallet-adapter-base \
+    @trezoa/wallet-adapter-react \
+    @trezoa/wallet-adapter-react-ui \
+    @trezoa/wallet-adapter-wallets \
+    @trezoa/web3.js \
     react
 ```
 
@@ -24,18 +24,18 @@ npm install --save \
 
 ```tsx
 import React, { FC, useMemo } from 'react';
-import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
-import { UnsafeBurnerWalletAdapter } from '@solana/wallet-adapter-wallets';
+import { ConnectionProvider, WalletProvider } from '@trezoa/wallet-adapter-react';
+import { WalletAdapterNetwork } from '@trezoa/wallet-adapter-base';
+import { UnsafeBurnerWalletAdapter } from '@trezoa/wallet-adapter-wallets';
 import {
     WalletModalProvider,
     WalletDisconnectButton,
     WalletMultiButton
-} from '@solana/wallet-adapter-react-ui';
-import { clusterApiUrl } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-react-ui';
+import { clusterApiUrl } from '@trezoa/web3.js';
 
 // Default styles that can be overridden by your app
-import '@solana/wallet-adapter-react-ui/styles.css';
+import '@trezoa/wallet-adapter-react-ui/styles.css';
 
 export const Wallet: FC = () => {
     // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
@@ -49,14 +49,14 @@ export const Wallet: FC = () => {
             /**
              * Wallets that implement either of these standards will be available automatically.
              *
-             *   - Solana Mobile Stack Mobile Wallet Adapter Protocol
-             *     (https://github.com/solana-mobile/mobile-wallet-adapter)
-             *   - Solana Wallet Standard
-             *     (https://github.com/anza-xyz/wallet-standard)
+             *   - Trezoa Mobile Stack Mobile Wallet Adapter Protocol
+             *     (https://github.com/trezoa-mobile/mobile-wallet-adapter)
+             *   - Trezoa Wallet Standard
+             *     (https://github.com/trezoa-xyz/wallet-standard)
              *
              * If you wish to support a wallet that supports neither of those standards,
              * instantiate its legacy wallet adapter here. Common legacy adapters can be found
-             * in the npm package `@solana/wallet-adapter-wallets`.
+             * in the npm package `@trezoa/wallet-adapter-wallets`.
              */
             new UnsafeBurnerWalletAdapter(),
         ],
@@ -81,9 +81,9 @@ export const Wallet: FC = () => {
 ### Usage
 
 ```tsx
-import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import { Keypair, SystemProgram, Transaction } from '@solana/web3.js';
+import { WalletNotConnectedError } from '@trezoa/wallet-adapter-base';
+import { useConnection, useWallet } from '@trezoa/wallet-adapter-react';
+import { Keypair, SystemProgram, Transaction } from '@trezoa/web3.js';
 import React, { FC, useCallback } from 'react';
 
 export const SendSOLToRandomAddress: FC = () => {

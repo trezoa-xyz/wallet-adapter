@@ -1,8 +1,8 @@
 {
-    "name": "@solana/wallet-adapter-react",
+    "name": "@trezoa/wallet-adapter-react",
     "version": "0.15.39",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "author": "Trezoa Maintainers <maintainers@trezoa.foundation>",
+    "repository": "https://github.com/trezoa-xyz/wallet-adapter",
     "license": "Apache-2.0",
     "publishConfig": {
         "access": "public"
@@ -33,16 +33,16 @@
         "test": "jest"
     },
     "peerDependencies": {
-        "@solana/web3.js": "^1.98.0",
+        "@trezoa/web3.js": "^1.98.0",
         "react": "*"
     },
     "dependencies": {
-        "@solana-mobile/wallet-adapter-mobile": "^2.2.0",
-        "@solana/wallet-adapter-base": "workspace:^",
-        "@solana/wallet-standard-wallet-adapter-react": "^1.1.4"
+        "@trezoa-mobile/wallet-adapter-mobile": "^2.2.0",
+        "@trezoa/wallet-adapter-base": "workspace:^",
+        "@trezoa/wallet-standard-wallet-adapter-react": "^1.1.4"
     },
     "devDependencies": {
-        "@solana/web3.js": "^1.98.2",
+        "@trezoa/web3.js": "^1.98.2",
         "@types/jest": "^29.5.14",
         "@types/react": "^19.1.6",
         "@types/react-dom": "^19.1.5",

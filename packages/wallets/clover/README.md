@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-clover`
+# `@trezoa/wallet-adapter-clover`
 
 <!-- @TODO -->
 

@@ -1,5 +1,5 @@
-import type { FractalWalletAdapterImpl as FractalWallet } from '@fractalwagmi/solana-wallet-adapter';
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { FractalWalletAdapterImpl as FractalWallet } from '@fractalwagmi/trezoa-wallet-adapter';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     WalletConfigError,
@@ -12,9 +12,9 @@ import {
     WalletReadyState,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 export interface FractalWalletAdapterConfig {}
 
@@ -22,7 +22,7 @@ export const FractalWalletName = 'Fractal' as WalletName<'Fractal'>;
 
 export class FractalWalletAdapter extends BaseMessageSignerWalletAdapter {
     name = FractalWalletName;
-    url = 'https://developers.fractal.is/wallet-adapters/solana';
+    url = 'https://developers.fractal.is/wallet-adapters/trezoa';
     icon =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDEwMDAiPjxwYXRoIGQ9Ik0zNDIuMjQgNzYzLjkzVjI0My44Mkg3MTV2MTEyLjY5SDQ4MXYxMTUuNThoMTgydjExMi42OUg0ODF2MTc5LjE1WiIgc3R5bGU9ImZpbGw6I2RlMzU5YyIvPjwvc3ZnPg==';
     readonly supportedTransactionVersions = null;
@@ -63,7 +63,7 @@ export class FractalWalletAdapter extends BaseMessageSignerWalletAdapter {
 
             let FractalWalletClass: typeof FractalWallet;
             try {
-                FractalWalletClass = (await import('@fractalwagmi/solana-wallet-adapter')).FractalWalletAdapterImpl;
+                FractalWalletClass = (await import('@fractalwagmi/trezoa-wallet-adapter')).FractalWalletAdapterImpl;
             } catch (error: any) {
                 throw new WalletLoadError(error?.message, error);
             }

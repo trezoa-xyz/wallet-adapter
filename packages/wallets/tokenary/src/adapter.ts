@@ -1,4 +1,4 @@
-import type { EventEmitter, SendTransactionOptions, WalletName } from '@solana/wallet-adapter-base';
+import type { EventEmitter, SendTransactionOptions, WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -14,9 +14,9 @@ import {
     WalletSendTransactionError,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Connection, SendOptions, Transaction, TransactionSignature } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Connection, SendOptions, Transaction, TransactionSignature } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface TokenaryWalletEvents {
     connect(...args: unknown[]): unknown;
@@ -39,7 +39,7 @@ interface TokenaryWallet extends EventEmitter<TokenaryWalletEvents> {
 }
 
 interface TokenaryWindow extends Window {
-    tokenarySolana?: TokenaryWallet;
+    tokenaryTrezoa?: TokenaryWallet;
 }
 
 declare const window: TokenaryWindow;
@@ -71,7 +71,7 @@ export class TokenaryWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.tokenarySolana?.isTokenary) {
+                if (window.tokenaryTrezoa?.isTokenary) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -105,7 +105,7 @@ export class TokenaryWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.tokenarySolana!;
+            const wallet = window.tokenaryTrezoa!;
 
             try {
                 await wallet.connect();

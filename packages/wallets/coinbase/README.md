@@ -1,8 +1,8 @@
-# `@solana/wallet-adapter-coinbase`
+# `@trezoa/wallet-adapter-coinbase`
 
-This package provides an adapter to enable Solana apps to connect to the Coinbase Wallet browser extension.
+This package provides an adapter to enable Trezoa apps to connect to the Coinbase Wallet browser extension.
 
-For quick setup, please refer to the anza-xyz/wallet-adapter [README](https://github.com/anza-xyz/wallet-adapter#quick-setup-using-react-ui)
+For quick setup, please refer to the trezoa-xyz/wallet-adapter [README](https://github.com/trezoa-xyz/wallet-adapter#quick-setup-using-react-ui)
 
 [Coinbase Wallet extension](https://chrome.google.com/webstore/detail/coinbase-wallet-extension/hnfanknocfeofbddgcijnmhnfnkdnaad?hl=en) is the safest and easiest way to use crypto apps in your browser.
 

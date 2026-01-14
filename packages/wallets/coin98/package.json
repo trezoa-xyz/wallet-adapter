@@ -1,8 +1,8 @@
 {
-    "name": "@solana/wallet-adapter-coin98",
+    "name": "@trezoa/wallet-adapter-coin98",
     "version": "0.5.24",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "author": "Trezoa Maintainers <maintainers@trezoa.foundation>",
+    "repository": "https://github.com/trezoa-xyz/wallet-adapter",
     "license": "Apache-2.0",
     "publishConfig": {
         "access": "public"
@@ -32,15 +32,15 @@
         "package": "shx mkdir -p lib/cjs && shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json"
     },
     "peerDependencies": {
-        "@solana/web3.js": "^1.98.0"
+        "@trezoa/web3.js": "^1.98.0"
     },
     "dependencies": {
-        "@solana/wallet-adapter-base": "workspace:^",
+        "@trezoa/wallet-adapter-base": "workspace:^",
         "bs58": "^6.0.0",
         "buffer": "^6.0.3"
     },
     "devDependencies": {
-        "@solana/web3.js": "^1.98.2",
+        "@trezoa/web3.js": "^1.98.2",
         "shx": "^0.4.0"
     }
 }

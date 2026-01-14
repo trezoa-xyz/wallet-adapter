@@ -2,11 +2,11 @@ import {
     createDefaultAddressSelector,
     createDefaultAuthorizationResultCache,
     createDefaultWalletNotFoundHandler,
-    SolanaMobileWalletAdapter,
-    SolanaMobileWalletAdapterWalletName,
-} from '@solana-mobile/wallet-adapter-mobile';
-import { type Adapter, type WalletError, type WalletName } from '@solana/wallet-adapter-base';
-import { useStandardWalletAdapters } from '@solana/wallet-standard-wallet-adapter-react';
+    TrezoaMobileWalletAdapter,
+    TrezoaMobileWalletAdapterWalletName,
+} from '@trezoa-mobile/wallet-adapter-mobile';
+import { type Adapter, type WalletError, type WalletName } from '@trezoa/wallet-adapter-base';
+import { useStandardWalletAdapters } from '@trezoa/wallet-standard-wallet-adapter-react';
 import React, { type ReactNode, useCallback, useEffect, useMemo, useRef } from 'react';
 import getEnvironment, { Environment } from './getEnvironment.js';
 import getInferredClusterFromEndpoint from './getInferredClusterFromEndpoint.js';
@@ -55,12 +55,12 @@ export function WalletProvider({
             return null;
         }
         const existingMobileWalletAdapter = adaptersWithStandardAdapters.find(
-            (adapter) => adapter.name === SolanaMobileWalletAdapterWalletName
+            (adapter) => adapter.name === TrezoaMobileWalletAdapterWalletName
         );
         if (existingMobileWalletAdapter) {
             return existingMobileWalletAdapter;
         }
-        return new SolanaMobileWalletAdapter({
+        return new TrezoaMobileWalletAdapter({
             addressSelector: createDefaultAddressSelector(),
             appIdentity: {
                 uri: getUriForAppIdentity(),
@@ -90,7 +90,7 @@ export function WalletProvider({
                 // sufficient reason to call `disconnect` on the mobile wallet adapter.
                 // Calling `disconnect` on the mobile wallet adapter causes the entire
                 // authorization store to be wiped.
-                adapter.name !== SolanaMobileWalletAdapterWalletName
+                adapter.name !== TrezoaMobileWalletAdapterWalletName
             ) {
                 adapter.disconnect();
             }
@@ -125,7 +125,7 @@ export function WalletProvider({
     }, [autoConnect, adapter]);
     const isUnloadingRef = useRef(false);
     useEffect(() => {
-        if (walletName === SolanaMobileWalletAdapterWalletName && getIsMobile(adaptersWithStandardAdapters)) {
+        if (walletName === TrezoaMobileWalletAdapterWalletName && getIsMobile(adaptersWithStandardAdapters)) {
             isUnloadingRef.current = false;
             return;
         }

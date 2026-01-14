@@ -1,4 +1,4 @@
-import type { EventEmitter, WalletName } from '@solana/wallet-adapter-base';
+import type { EventEmitter, WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -11,9 +11,9 @@ import {
     WalletReadyState,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface HyperPayWalletEvents {
     connect(...args: unknown[]): unknown;
@@ -33,7 +33,7 @@ interface HyperPayWallet extends EventEmitter<HyperPayWalletEvents> {
 
 interface HyperPayWindow extends Window {
     hyperPay?: {
-        solana?: HyperPayWallet;
+        trezoa?: HyperPayWallet;
     };
 }
 
@@ -66,7 +66,7 @@ export class HyperPayWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.hyperPay?.solana?.isHyperPay) {
+                if (window.hyperPay?.trezoa?.isHyperPay) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -100,7 +100,7 @@ export class HyperPayWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.hyperPay!.solana!;
+            const wallet = window.hyperPay!.trezoa!;
 
             try {
                 await wallet.connect();

@@ -95,7 +95,7 @@
             "path": "./packages/wallets/sky/tsconfig.json"
         },
         {
-            "path": "./packages/wallets/solflare/tsconfig.json"
+            "path": "./packages/wallets/trzflare/tsconfig.json"
         },
         {
             "path": "./packages/wallets/solong/tsconfig.json"

@@ -1,17 +1,17 @@
-import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
-import { SOLANA_DEVNET_CHAIN, SOLANA_MAINNET_CHAIN, SOLANA_TESTNET_CHAIN } from '@solana/wallet-standard-chains';
+import { WalletNotConnectedError } from '@trezoa/wallet-adapter-base';
+import { SOLANA_DEVNET_CHAIN, SOLANA_MAINNET_CHAIN, SOLANA_TESTNET_CHAIN } from '@trezoa/wallet-standard-chains';
 import {
-    SolanaSignAndSendTransaction,
-    type SolanaSignAndSendTransactionFeature,
-    type SolanaSignAndSendTransactionMethod,
-    SolanaSignMessage,
-    type SolanaSignMessageFeature,
-    type SolanaSignMessageMethod,
-    SolanaSignTransaction,
-    type SolanaSignTransactionFeature,
-    type SolanaSignTransactionMethod,
-} from '@solana/wallet-standard-features';
-import type { default as SolflareMetaMask } from '@solflare-wallet/metamask-sdk';
+    TrezoaSignAndSendTransaction,
+    type TrezoaSignAndSendTransactionFeature,
+    type TrezoaSignAndSendTransactionMethod,
+    TrezoaSignMessage,
+    type TrezoaSignMessageFeature,
+    type TrezoaSignMessageMethod,
+    TrezoaSignTransaction,
+    type TrezoaSignTransactionFeature,
+    type TrezoaSignTransactionMethod,
+} from '@trezoa/wallet-standard-features';
+import type { default as SolflareMetaMask } from '@trzflare-wallet/metamask-sdk';
 import type { Wallet } from '@wallet-standard/base';
 import {
     StandardConnect,
@@ -34,7 +34,7 @@ export class SolflareMetaMaskWallet implements Wallet {
     readonly #version = '1.0.0' as const;
     readonly #name = 'MetaMask' as const;
     readonly #icon = icon;
-    #solflareMetaMask: SolflareMetaMask | null = null;
+    #trzflareMetaMask: SolflareMetaMask | null = null;
 
     get version() {
         return this.#version;
@@ -55,9 +55,9 @@ export class SolflareMetaMaskWallet implements Wallet {
     get features(): StandardConnectFeature &
         StandardDisconnectFeature &
         StandardEventsFeature &
-        SolanaSignAndSendTransactionFeature &
-        SolanaSignTransactionFeature &
-        SolanaSignMessageFeature {
+        TrezoaSignAndSendTransactionFeature &
+        TrezoaSignTransactionFeature &
+        TrezoaSignMessageFeature {
         return {
             [StandardConnect]: {
                 version: '1.0.0',
@@ -71,17 +71,17 @@ export class SolflareMetaMaskWallet implements Wallet {
                 version: '1.0.0',
                 on: this.#on,
             },
-            [SolanaSignAndSendTransaction]: {
+            [TrezoaSignAndSendTransaction]: {
                 version: '1.0.0',
                 supportedTransactionVersions: ['legacy', 0],
                 signAndSendTransaction: this.#signAndSendTransaction,
             },
-            [SolanaSignTransaction]: {
+            [TrezoaSignTransaction]: {
                 version: '1.0.0',
                 supportedTransactionVersions: ['legacy', 0],
                 signTransaction: this.#signTransaction,
             },
-            [SolanaSignMessage]: {
+            [TrezoaSignMessage]: {
                 version: '1.0.0',
                 signMessage: this.#signMessage,
             },
@@ -89,7 +89,7 @@ export class SolflareMetaMaskWallet implements Wallet {
     }
 
     get accounts() {
-        return this.#solflareMetaMask ? this.#solflareMetaMask.standardAccounts : [];
+        return this.#trzflareMetaMask ? this.#trzflareMetaMask.standardAccounts : [];
     }
 
     #on: StandardEventsOnMethod = (event, listener) => {
@@ -107,43 +107,43 @@ export class SolflareMetaMaskWallet implements Wallet {
     }
 
     #connect: StandardConnectMethod = async () => {
-        if (!this.#solflareMetaMask) {
+        if (!this.#trzflareMetaMask) {
             let SolflareMetaMaskClass: typeof SolflareMetaMask;
             try {
-                SolflareMetaMaskClass = (await import('@solflare-wallet/metamask-sdk')).default;
+                SolflareMetaMaskClass = (await import('@trzflare-wallet/metamask-sdk')).default;
             } catch (error: any) {
                 throw new Error('Unable to load Solflare MetaMask SDK');
             }
-            this.#solflareMetaMask = new SolflareMetaMaskClass();
-            this.#solflareMetaMask.on('standard_change', (properties: StandardEventsChangeProperties) =>
+            this.#trzflareMetaMask = new SolflareMetaMaskClass();
+            this.#trzflareMetaMask.on('standard_change', (properties: StandardEventsChangeProperties) =>
                 this.#emit('change', properties)
             );
         }
 
         if (!this.accounts.length) {
-            await this.#solflareMetaMask.connect();
+            await this.#trzflareMetaMask.connect();
         }
 
         return { accounts: this.accounts };
     };
 
     #disconnect: StandardDisconnectMethod = async () => {
-        if (!this.#solflareMetaMask) return;
-        await this.#solflareMetaMask.disconnect();
+        if (!this.#trzflareMetaMask) return;
+        await this.#trzflareMetaMask.disconnect();
     };
 
-    #signAndSendTransaction: SolanaSignAndSendTransactionMethod = async (...inputs) => {
-        if (!this.#solflareMetaMask) throw new WalletNotConnectedError();
-        return await this.#solflareMetaMask.standardSignAndSendTransaction(...inputs);
+    #signAndSendTransaction: TrezoaSignAndSendTransactionMethod = async (...inputs) => {
+        if (!this.#trzflareMetaMask) throw new WalletNotConnectedError();
+        return await this.#trzflareMetaMask.standardSignAndSendTransaction(...inputs);
     };
 
-    #signTransaction: SolanaSignTransactionMethod = async (...inputs) => {
-        if (!this.#solflareMetaMask) throw new WalletNotConnectedError();
-        return await this.#solflareMetaMask.standardSignTransaction(...inputs);
+    #signTransaction: TrezoaSignTransactionMethod = async (...inputs) => {
+        if (!this.#trzflareMetaMask) throw new WalletNotConnectedError();
+        return await this.#trzflareMetaMask.standardSignTransaction(...inputs);
     };
 
-    #signMessage: SolanaSignMessageMethod = async (...inputs) => {
-        if (!this.#solflareMetaMask) throw new WalletNotConnectedError();
-        return await this.#solflareMetaMask.standardSignMessage(...inputs);
+    #signMessage: TrezoaSignMessageMethod = async (...inputs) => {
+        if (!this.#trzflareMetaMask) throw new WalletNotConnectedError();
+        return await this.#trzflareMetaMask.standardSignMessage(...inputs);
     };
 }

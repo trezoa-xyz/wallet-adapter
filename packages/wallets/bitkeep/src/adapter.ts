@@ -1,4 +1,4 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -9,9 +9,9 @@ import {
     WalletPublicKeyError,
     WalletReadyState,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface BitgetWallet {
     isBitKeep?: boolean;
@@ -25,7 +25,7 @@ interface BitgetWallet {
 
 interface BitgetWindow extends Window {
     bitkeep?: {
-        solana?: BitgetWallet;
+        trezoa?: BitgetWallet;
     };
 }
 
@@ -58,7 +58,7 @@ export class BitgetWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.bitkeep?.solana?.isBitKeep) {
+                if (window.bitkeep?.trezoa?.isBitKeep) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -88,7 +88,7 @@ export class BitgetWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.bitkeep!.solana!;
+            const wallet = window.bitkeep!.trezoa!;
 
             let account: string;
             try {

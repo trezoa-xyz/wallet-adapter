@@ -16,7 +16,7 @@ import {
     type EventEmitter,
     type SendTransactionOptions,
     type WalletName,
-} from '@solana/wallet-adapter-base';
+} from '@trezoa/wallet-adapter-base';
 import {
     PublicKey,
     type Connection,
@@ -24,7 +24,7 @@ import {
     type Transaction,
     type TransactionSignature,
     type VersionedTransaction,
-} from '@solana/web3.js';
+} from '@trezoa/web3.js';
 
 interface TokenPocketWalletEvents {
     connect(...args: unknown[]): unknown;
@@ -47,7 +47,7 @@ interface TokenPocketWallet extends EventEmitter<TokenPocketWalletEvents> {
 }
 
 interface TokenPocketWindow extends Window {
-    solana?: TokenPocketWallet;
+    trezoa?: TokenPocketWallet;
 }
 
 declare const window: TokenPocketWindow;
@@ -79,7 +79,7 @@ export class TokenPocketWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.solana?.isTokenPocket) {
+                if (window.trezoa?.isTokenPocket) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -113,7 +113,7 @@ export class TokenPocketWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.solana!;
+            const wallet = window.trezoa!;
 
             try {
                 await wallet.connect();

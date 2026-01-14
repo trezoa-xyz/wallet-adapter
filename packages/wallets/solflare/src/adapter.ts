@@ -1,4 +1,4 @@
-import type { WalletAdapterNetwork, WalletName } from '@solana/wallet-adapter-base';
+import type { WalletAdapterNetwork, WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     WalletConfigError,
@@ -18,14 +18,14 @@ import {
     isVersionedTransaction,
     scopePollingDetectionStrategy,
     type SendTransactionOptions,
-} from '@solana/wallet-adapter-base';
-import type { Transaction, TransactionVersion, VersionedTransaction } from '@solana/web3.js';
-import { PublicKey, type Connection, type TransactionSignature } from '@solana/web3.js';
-import type { default as Solflare } from '@solflare-wallet/sdk';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction, TransactionVersion, VersionedTransaction } from '@trezoa/web3.js';
+import { PublicKey, type Connection, type TransactionSignature } from '@trezoa/web3.js';
+import type { default as Solflare } from '@trzflare-wallet/sdk';
 import { detectAndRegisterSolflareMetaMaskWallet } from './metamask/detect.js';
 
 interface SolflareWindow extends Window {
-    solflare?: {
+    trzflare?: {
         isSolflare?: boolean;
     };
     SolflareApp?: unknown;
@@ -41,7 +41,7 @@ export const SolflareWalletName = 'Solflare' as WalletName<'Solflare'>;
 
 export class SolflareWalletAdapter extends BaseMessageSignerWalletAdapter {
     name = SolflareWalletName;
-    url = 'https://solflare.com';
+    url = 'https://trzflare.com';
     icon =
         'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJTIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMwMjA1MGE7c3Ryb2tlOiNmZmVmNDY7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOi41cHg7fS5jbHMtMntmaWxsOiNmZmVmNDY7fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iMTIiIHJ5PSIxMiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTI0LjIzLDI2LjQybDIuNDYtMi4zOCw0LjU5LDEuNWMzLjAxLDEsNC41MSwyLjg0LDQuNTEsNS40MywwLDEuOTYtLjc1LDMuMjYtMi4yNSw0LjkzbC0uNDYuNS4xNy0xLjE3Yy42Ny00LjI2LS41OC02LjA5LTQuNzItNy40M2wtNC4zLTEuMzhoMFpNMTguMDUsMTEuODVsMTIuNTIsNC4xNy0yLjcxLDIuNTktNi41MS0yLjE3Yy0yLjI1LS43NS0zLjAxLTEuOTYtMy4zLTQuNTF2LS4wOGgwWk0xNy4zLDMzLjA2bDIuODQtMi43MSw1LjM0LDEuNzVjMi44LjkyLDMuNzYsMi4xMywzLjQ2LDUuMThsLTExLjY1LTQuMjJoMFpNMTMuNzEsMjAuOTVjMC0uNzkuNDItMS41NCwxLjEzLTIuMTcuNzUsMS4wOSwyLjA1LDIuMDUsNC4wOSwyLjcxbDQuNDIsMS40Ni0yLjQ2LDIuMzgtNC4zNC0xLjQyYy0yLS42Ny0yLjg0LTEuNjctMi44NC0yLjk2TTI2LjgyLDQyLjg3YzkuMTgtNi4wOSwxNC4xMS0xMC4yMywxNC4xMS0xNS4zMiwwLTMuMzgtMi01LjI2LTYuNDMtNi43MmwtMy4zNC0xLjEzLDkuMTQtOC43Ny0xLjg0LTEuOTYtMi43MSwyLjM4LTEyLjgxLTQuMjJjLTMuOTcsMS4yOS04Ljk3LDUuMDktOC45Nyw4Ljg5LDAsLjQyLjA0LjgzLjE3LDEuMjktMy4zLDEuODgtNC42MywzLjYzLTQuNjMsNS44LDAsMi4wNSwxLjA5LDQuMDksNC41NSw1LjIybDIuNzUuOTItOS41Miw5LjE0LDEuODQsMS45NiwyLjk2LTIuNzEsMTQuNzMsNS4yMmgwWiIvPjwvc3ZnPg==';
     supportedTransactionVersions: ReadonlySet<TransactionVersion> = new Set(['legacy', 0]);
@@ -64,7 +64,7 @@ export class SolflareWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.solflare?.isSolflare || window.SolflareApp) {
+                if (window.trzflare?.isSolflare || window.SolflareApp) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -110,13 +110,13 @@ export class SolflareWalletAdapter extends BaseMessageSignerWalletAdapter {
             if (this.readyState === WalletReadyState.Loadable && isIosAndRedirectable()) {
                 const url = encodeURIComponent(window.location.href);
                 const ref = encodeURIComponent(window.location.origin);
-                window.location.href = `https://solflare.com/ul/v1/browse/${url}?ref=${ref}`;
+                window.location.href = `https://trzflare.com/ul/v1/browse/${url}?ref=${ref}`;
                 return;
             }
 
             let SolflareClass: typeof Solflare;
             try {
-                SolflareClass = (await import('@solflare-wallet/sdk')).default;
+                SolflareClass = (await import('@trzflare-wallet/sdk')).default;
             } catch (error: any) {
                 throw new WalletLoadError(error?.message, error);
             }

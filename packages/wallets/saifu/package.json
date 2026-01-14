@@ -1,8 +1,8 @@
 {
-    "name": "@solana/wallet-adapter-saifu",
+    "name": "@trezoa/wallet-adapter-saifu",
     "version": "0.1.19",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "author": "Trezoa Maintainers <maintainers@trezoa.foundation>",
+    "repository": "https://github.com/trezoa-xyz/wallet-adapter",
     "license": "Apache-2.0",
     "publishConfig": {
         "access": "public"
@@ -32,13 +32,13 @@
         "package": "shx mkdir -p lib/cjs && shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json"
     },
     "peerDependencies": {
-        "@solana/web3.js": "^1.98.0"
+        "@trezoa/web3.js": "^1.98.0"
     },
     "dependencies": {
-        "@solana/wallet-adapter-base": "workspace:^"
+        "@trezoa/wallet-adapter-base": "workspace:^"
     },
     "devDependencies": {
-        "@solana/web3.js": "^1.98.2",
+        "@trezoa/web3.js": "^1.98.2",
         "shx": "^0.4.0"
     }
 }

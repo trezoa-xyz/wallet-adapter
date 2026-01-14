@@ -7,11 +7,11 @@
 import {
     type AddressSelector,
     type AuthorizationResultCache,
-    SolanaMobileWalletAdapter,
-    SolanaMobileWalletAdapterWalletName,
-} from '@solana-mobile/wallet-adapter-mobile';
-import { type Adapter, WalletError, type WalletName, WalletReadyState } from '@solana/wallet-adapter-base';
-import { type Connection, PublicKey } from '@solana/web3.js';
+    TrezoaMobileWalletAdapter,
+    TrezoaMobileWalletAdapterWalletName,
+} from '@trezoa-mobile/wallet-adapter-mobile';
+import { type Adapter, WalletError, type WalletName, WalletReadyState } from '@trezoa/wallet-adapter-base';
+import { type Connection, PublicKey } from '@trezoa/web3.js';
 import 'jest-localstorage-mock';
 import React, { act, createRef, forwardRef, useImperativeHandle } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -156,16 +156,16 @@ describe('WalletProvider when the environment is `MOBILE_WEB`', () => {
     describe('when there is no mobile wallet adapter in the adapters array', () => {
         it("creates a new mobile wallet adapter with the document's host as the uri of the `appIdentity`", () => {
             renderTest({});
-            expect(jest.mocked(SolanaMobileWalletAdapter).mock.instances).toHaveLength(1);
-            expect(jest.mocked(SolanaMobileWalletAdapter).mock.calls[0][0].appIdentity.uri).toBe(
+            expect(jest.mocked(TrezoaMobileWalletAdapter).mock.instances).toHaveLength(1);
+            expect(jest.mocked(TrezoaMobileWalletAdapter).mock.calls[0][0].appIdentity.uri).toBe(
                 `${document.location.protocol}//${document.location.host}`
             );
         });
         it('creates a new mobile wallet adapter with the appropriate cluster for the given endpoint', () => {
             renderTest({});
-            expect(jest.mocked(SolanaMobileWalletAdapter).mock.instances).toHaveLength(1);
-            // @ts-expect-error // HACK: SolanaMobileWalletAdapter has a `cluster` property but it's not declared.
-            expect(jest.mocked(SolanaMobileWalletAdapter).mock.calls[0][0].cluster).toBe('fake-cluster-for-test');
+            expect(jest.mocked(TrezoaMobileWalletAdapter).mock.instances).toHaveLength(1);
+            // @ts-expect-error // HACK: TrezoaMobileWalletAdapter has a `cluster` property but it's not declared.
+            expect(jest.mocked(TrezoaMobileWalletAdapter).mock.calls[0][0].cluster).toBe('fake-cluster-for-test');
         });
     });
     describe('when a custom mobile wallet adapter is supplied in the adapters array', () => {
@@ -175,7 +175,7 @@ describe('WalletProvider when the environment is `MOBILE_WEB`', () => {
         };
         const CUSTOM_CLUSTER = 'devnet';
         beforeEach(() => {
-            customAdapter = new SolanaMobileWalletAdapter({
+            customAdapter = new TrezoaMobileWalletAdapter({
                 addressSelector: jest.fn() as unknown as AddressSelector,
                 appIdentity: CUSTOM_APP_IDENTITY,
                 authorizationResultCache: jest.fn() as unknown as AuthorizationResultCache,
@@ -191,7 +191,7 @@ describe('WalletProvider when the environment is `MOBILE_WEB`', () => {
         });
         it('does not construct any further mobile wallet adapters', () => {
             renderTest({});
-            expect(jest.mocked(SolanaMobileWalletAdapter).mock.calls.length).toBe(0);
+            expect(jest.mocked(TrezoaMobileWalletAdapter).mock.calls.length).toBe(0);
         });
     });
     describe('when there exists no stored wallet name', () => {
@@ -232,7 +232,7 @@ describe('WalletProvider when the environment is `MOBILE_WEB`', () => {
             beforeEach(async () => {
                 renderTest({});
                 await act(async () => {
-                    ref.current?.getWalletContextState().select(SolanaMobileWalletAdapterWalletName);
+                    ref.current?.getWalletContextState().select(TrezoaMobileWalletAdapterWalletName);
                     await Promise.resolve(); // Flush all promises in effects after calling `select()`.
                 });
             });
@@ -241,7 +241,7 @@ describe('WalletProvider when the environment is `MOBILE_WEB`', () => {
                     renderTest({ autoConnect: false });
                 });
                 it('does not call `connect`', () => {
-                    const adapter = ref.current?.getWalletContextState().wallet?.adapter as SolanaMobileWalletAdapter;
+                    const adapter = ref.current?.getWalletContextState().wallet?.adapter as TrezoaMobileWalletAdapter;
                     expect(adapter.connect).not.toHaveBeenCalled();
                     expect(adapter.autoConnect).not.toHaveBeenCalled();
                 });
@@ -251,7 +251,7 @@ describe('WalletProvider when the environment is `MOBILE_WEB`', () => {
                     renderTest({ autoConnect: true });
                 });
                 it('calls the connect method on the mobile wallet adapter', () => {
-                    const adapter = ref.current?.getWalletContextState().wallet?.adapter as SolanaMobileWalletAdapter;
+                    const adapter = ref.current?.getWalletContextState().wallet?.adapter as TrezoaMobileWalletAdapter;
                     expect(adapter.connect).toHaveBeenCalled();
                     expect(adapter.autoConnect).not.toHaveBeenCalled();
                 });
@@ -301,7 +301,7 @@ describe('WalletProvider when the environment is `MOBILE_WEB`', () => {
             let adapter: Adapter;
             beforeEach(() => {
                 act(() => {
-                    adapter = ref.current?.getWalletContextState().wallet?.adapter as SolanaMobileWalletAdapter;
+                    adapter = ref.current?.getWalletContextState().wallet?.adapter as TrezoaMobileWalletAdapter;
                     adapter.emit('error', errorThrown);
                 });
             });
@@ -319,7 +319,7 @@ describe('WalletProvider when the environment is `MOBILE_WEB`', () => {
                 let adapter: Adapter;
                 beforeEach(() => {
                     act(() => {
-                        adapter = ref.current?.getWalletContextState().wallet?.adapter as SolanaMobileWalletAdapter;
+                        adapter = ref.current?.getWalletContextState().wallet?.adapter as TrezoaMobileWalletAdapter;
                         adapter.emit('error', errorThrown);
                     });
                 });
@@ -390,10 +390,10 @@ describe('WalletProvider when the environment is `MOBILE_WEB`', () => {
             beforeEach(async () => {
                 renderTest({});
                 await act(async () => {
-                    ref.current?.getWalletContextState().select(SolanaMobileWalletAdapterWalletName);
+                    ref.current?.getWalletContextState().select(TrezoaMobileWalletAdapterWalletName);
                     await Promise.resolve(); // Flush all promises in effects after calling `select()`.
                 });
-                mobileWalletAdapter = jest.mocked(SolanaMobileWalletAdapter).mock.results[0].value;
+                mobileWalletAdapter = jest.mocked(TrezoaMobileWalletAdapter).mock.results[0].value;
                 await act(() => {
                     ref.current?.getWalletContextState().connect();
                 });

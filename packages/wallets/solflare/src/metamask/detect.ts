@@ -11,7 +11,7 @@ function register() {
 
 /** @internal */
 export async function detectAndRegisterSolflareMetaMaskWallet(): Promise<void> {
-    const id = 'solflare-detect-metamask';
+    const id = 'trzflare-detect-metamask';
 
     function postMessage() {
         window.postMessage(

@@ -1,4 +1,4 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -10,9 +10,9 @@ import {
     WalletReadyState,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface KrystalWallet {
     isConnected(): boolean;
@@ -25,7 +25,7 @@ interface KrystalWallet {
 
 interface KrystalWindow extends Window {
     krystal?: {
-        solana?: KrystalWallet;
+        trezoa?: KrystalWallet;
     };
 }
 
@@ -58,7 +58,7 @@ export class KrystalWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.krystal?.solana) {
+                if (window.krystal?.trezoa) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -92,7 +92,7 @@ export class KrystalWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.krystal!.solana!;
+            const wallet = window.krystal!.trezoa!;
 
             let account: string;
             try {

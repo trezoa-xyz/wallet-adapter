@@ -1,1 +1,1 @@
-export * from '@walletconnect/solana-adapter';
+export * from '@walletconnect/trezoa-adapter';

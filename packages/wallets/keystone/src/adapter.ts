@@ -1,5 +1,5 @@
 import type { DefaultKeyring } from '@keystonehq/sol-keyring';
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     isVersionedTransaction,
@@ -10,9 +10,9 @@ import {
     WalletPublicKeyError,
     WalletReadyState,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction, TransactionVersion, VersionedTransaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction, TransactionVersion, VersionedTransaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 import './polyfills/index.js';
 
 export interface KeystoneWalletAdapterConfig {}

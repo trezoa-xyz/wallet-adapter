@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-xdefi`
+# `@trezoa/wallet-adapter-xdefi`
 
 <!-- @TODO -->
 

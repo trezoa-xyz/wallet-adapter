@@ -1,7 +1,7 @@
-# `@solana/wallet-adapter-walletconnect`
+# `@trezoa/wallet-adapter-walletconnect`
 
 ```
-import { WalletConnectWalletAdapter } from '@solana/wallet-adapter-walletconnect';
+import { WalletConnectWalletAdapter } from '@trezoa/wallet-adapter-walletconnect';
 
 const App = () => {
   ...
@@ -16,7 +16,7 @@ const App = () => {
                   metadata: {
                       name: 'Example App',
                       description: 'Example App',
-                      url: 'https://github.com/anza-xyz/wallet-adapter',
+                      url: 'https://github.com/trezoa-xyz/wallet-adapter',
                       icons: ['https://avatars.githubusercontent.com/u/35608259?s=200'],
                   },
               },

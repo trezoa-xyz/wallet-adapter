@@ -1,5 +1,5 @@
-import type { SolanaSignInInput, SolanaSignInOutput } from '@solana/wallet-standard-features';
-import type { Connection, TransactionSignature } from '@solana/web3.js';
+import type { TrezoaSignInInput, TrezoaSignInOutput } from '@trezoa/wallet-standard-features';
+import type { Connection, TransactionSignature } from '@trezoa/web3.js';
 import {
     BaseWalletAdapter,
     type SendTransactionOptions,
@@ -130,7 +130,7 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
 }
 
 export interface SignInMessageSignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> {
-    signIn(input?: SolanaSignInInput): Promise<SolanaSignInOutput>;
+    signIn(input?: TrezoaSignInInput): Promise<TrezoaSignInOutput>;
 }
 
 export type SignInMessageSignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> &
@@ -140,5 +140,5 @@ export abstract class BaseSignInMessageSignerWalletAdapter<Name extends string =
     extends BaseMessageSignerWalletAdapter<Name>
     implements SignInMessageSignerWalletAdapter<Name>
 {
-    abstract signIn(input?: SolanaSignInInput): Promise<SolanaSignInOutput>;
+    abstract signIn(input?: TrezoaSignInInput): Promise<TrezoaSignInOutput>;
 }

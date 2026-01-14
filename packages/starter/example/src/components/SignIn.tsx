@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
-import { useWallet } from '@solana/wallet-adapter-react';
-import type { SolanaSignInInput } from '@solana/wallet-standard-features';
-import { verifySignIn } from '@solana/wallet-standard-util';
+import { useWallet } from '@trezoa/wallet-adapter-react';
+import type { TrezoaSignInInput } from '@trezoa/wallet-standard-features';
+import { verifySignIn } from '@trezoa/wallet-standard-util';
 import bs58 from 'bs58';
 import React, { useCallback, type FC } from 'react';
 import { useNotify } from './useNotify';
@@ -12,9 +12,9 @@ export const SignIn: FC = () => {
 
     const onClick = useCallback(async () => {
         try {
-            if (!signIn) throw new Error('Wallet does not support Sign In With Solana!');
+            if (!signIn) throw new Error('Wallet does not support Sign In With Trezoa!');
 
-            const input: SolanaSignInInput = {
+            const input: TrezoaSignInInput = {
                 domain: window.location.host,
                 address: publicKey ? publicKey.toBase58() : undefined,
                 statement: 'Please sign in.',

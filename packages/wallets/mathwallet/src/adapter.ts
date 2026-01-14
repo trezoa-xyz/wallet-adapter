@@ -1,4 +1,4 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -9,9 +9,9 @@ import {
     WalletPublicKeyError,
     WalletReadyState,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface MathWallet {
     isMathWallet?: boolean;
@@ -21,7 +21,7 @@ interface MathWallet {
 }
 
 interface MathWalletWindow extends Window {
-    solana?: MathWallet;
+    trezoa?: MathWallet;
 }
 
 declare const window: MathWalletWindow;
@@ -53,7 +53,7 @@ export class MathWalletAdapter extends BaseSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.solana?.isMathWallet) {
+                if (window.trezoa?.isMathWallet) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -83,7 +83,7 @@ export class MathWalletAdapter extends BaseSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.solana!;
+            const wallet = window.trezoa!;
 
             let account: string;
             try {

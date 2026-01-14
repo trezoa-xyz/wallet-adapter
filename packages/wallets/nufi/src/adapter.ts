@@ -1,4 +1,4 @@
-import type { EventEmitter, SendTransactionOptions, WalletName } from '@solana/wallet-adapter-base';
+import type { EventEmitter, SendTransactionOptions, WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     isVersionedTransaction,
@@ -15,15 +15,15 @@ import {
     WalletSendTransactionError,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
+} from '@trezoa/wallet-adapter-base';
 import type {
     Connection,
     Transaction,
     TransactionSignature,
     TransactionVersion,
     VersionedTransaction,
-} from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface NufiWalletEvents {
     connect(): void;
@@ -45,7 +45,7 @@ interface NufiWallet extends EventEmitter<NufiWalletEvents> {
 }
 
 interface NufiWindow extends Window {
-    nufiSolana?: NufiWallet;
+    nufiTrezoa?: NufiWallet;
 }
 
 declare const window: NufiWindow;
@@ -74,7 +74,7 @@ export class NufiWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.nufiSolana?.isNufi) {
+                if (window.nufiTrezoa?.isNufi) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -108,7 +108,7 @@ export class NufiWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.nufiSolana!;
+            const wallet = window.nufiTrezoa!;
 
             if (!wallet.isConnected) {
                 try {

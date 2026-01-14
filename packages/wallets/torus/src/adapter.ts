@@ -1,4 +1,4 @@
-import type { SendTransactionOptions, WalletName } from '@solana/wallet-adapter-base';
+import type { SendTransactionOptions, WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     WalletAccountError,
@@ -14,10 +14,10 @@ import {
     WalletSendTransactionError,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Connection, Transaction, TransactionSignature } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
-import type { default as Torus, TorusParams } from '@toruslabs/solana-embed';
+} from '@trezoa/wallet-adapter-base';
+import type { Connection, Transaction, TransactionSignature } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
+import type { default as Torus, TorusParams } from '@toruslabs/trezoa-embed';
 
 export interface TorusWalletAdapterConfig {
     params?: TorusParams;
@@ -82,7 +82,7 @@ export class TorusWalletAdapter extends BaseMessageSignerWalletAdapter {
 
             let TorusClass: typeof Torus;
             try {
-                TorusClass = (await import('@toruslabs/solana-embed')).default;
+                TorusClass = (await import('@toruslabs/trezoa-embed')).default;
             } catch (error: any) {
                 throw new WalletLoadError(error?.message, error);
             }

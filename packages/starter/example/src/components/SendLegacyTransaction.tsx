@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import type { TransactionSignature } from '@solana/web3.js';
-import { PublicKey, TransactionMessage, VersionedTransaction } from '@solana/web3.js';
+import { useConnection, useWallet } from '@trezoa/wallet-adapter-react';
+import type { TransactionSignature } from '@trezoa/web3.js';
+import { PublicKey, TransactionMessage, VersionedTransaction } from '@trezoa/web3.js';
 import React, { useCallback, type FC } from 'react';
 import { useNotify } from './useNotify';
 
@@ -29,7 +29,7 @@ export const SendLegacyTransaction: FC = () => {
                 recentBlockhash: blockhash,
                 instructions: [
                     {
-                        data: Buffer.from('Hello, from the Solana Wallet Adapter example app!'),
+                        data: Buffer.from('Hello, from the Trezoa Wallet Adapter example app!'),
                         keys: [],
                         programId: new PublicKey('MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr'),
                     },

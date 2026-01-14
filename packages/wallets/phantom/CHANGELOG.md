@@ -1,4 +1,4 @@
-# @solana/wallet-adapter-phantom
+# @trezoa/wallet-adapter-phantom
 
 ## 0.9.28
 
@@ -6,7 +6,7 @@
 
 - 75bf350: Update dependencies
 - Updated dependencies [75bf350]
-    - @solana/wallet-adapter-base@0.9.27
+    - @trezoa/wallet-adapter-base@0.9.27
 
 ## 0.9.27
 
@@ -14,7 +14,7 @@
 
 - db923f1: Use Node 20+ rather than 22
 - Updated dependencies [db923f1]
-    - @solana/wallet-adapter-base@0.9.26
+    - @trezoa/wallet-adapter-base@0.9.26
 
 ## 0.9.26
 
@@ -22,7 +22,7 @@
 
 - 27e408d: Update dependencies
 - Updated dependencies [27e408d]
-    - @solana/wallet-adapter-base@0.9.25
+    - @trezoa/wallet-adapter-base@0.9.25
 
 ## 0.9.25
 
@@ -30,14 +30,14 @@
 
 - c96cae47: The base version of Node has been raised to v20
 - Updated dependencies [c96cae47]
-    - @solana/wallet-adapter-base@0.9.24
+    - @trezoa/wallet-adapter-base@0.9.24
 
 ## 0.9.24
 
 ### Patch Changes
 
 - Updated dependencies [a3d35a1]
-    - @solana/wallet-adapter-base@0.9.23
+    - @trezoa/wallet-adapter-base@0.9.23
 
 ## 0.9.23
 
@@ -51,7 +51,7 @@
 
 - 8a8fdc72: Update dependencies
 - Updated dependencies [8a8fdc72]
-    - @solana/wallet-adapter-base@0.9.22
+    - @trezoa/wallet-adapter-base@0.9.22
 
 ## 0.9.21
 
@@ -59,7 +59,7 @@
 
 - f99c2154: Fix for Phantom adapter's `connected` state
 - Updated dependencies [f99c2154]
-    - @solana/wallet-adapter-base@0.9.21
+    - @trezoa/wallet-adapter-base@0.9.21
 
 ## 0.9.20
 
@@ -73,7 +73,7 @@
 
 - 912cc0e: Allow wallets to customize autoConnect handling, adding support for Phantom deep links on iOS
 - Updated dependencies [912cc0e]
-    - @solana/wallet-adapter-base@0.9.20
+    - @trezoa/wallet-adapter-base@0.9.20
 
 ## 0.9.18
 
@@ -81,4 +81,4 @@
 
 - fed93f5: Add support for VersionedTransaction to Phantom adapter
 - Updated dependencies [353f2a5]
-    - @solana/wallet-adapter-base@0.9.19
+    - @trezoa/wallet-adapter-base@0.9.19

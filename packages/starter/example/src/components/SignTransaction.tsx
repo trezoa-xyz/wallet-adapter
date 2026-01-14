@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import { PublicKey, Transaction, TransactionInstruction } from '@solana/web3.js';
+import { useConnection, useWallet } from '@trezoa/wallet-adapter-react';
+import { PublicKey, Transaction, TransactionInstruction } from '@trezoa/web3.js';
 import bs58 from 'bs58';
 import React, { useCallback, type FC } from 'react';
 import { useNotify } from './useNotify';
@@ -22,7 +22,7 @@ export const SignTransaction: FC = () => {
                 recentBlockhash: blockhash,
             }).add(
                 new TransactionInstruction({
-                    data: Buffer.from('Hello, from the Solana Wallet Adapter example app!'),
+                    data: Buffer.from('Hello, from the Trezoa Wallet Adapter example app!'),
                     keys: [],
                     programId: new PublicKey('MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr'),
                 })

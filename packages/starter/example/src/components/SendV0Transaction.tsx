@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import type { TransactionSignature } from '@solana/web3.js';
-import { PublicKey, TransactionMessage, VersionedTransaction } from '@solana/web3.js';
+import { useConnection, useWallet } from '@trezoa/wallet-adapter-react';
+import type { TransactionSignature } from '@trezoa/web3.js';
+import { PublicKey, TransactionMessage, VersionedTransaction } from '@trezoa/web3.js';
 import React, { useCallback, type FC } from 'react';
 import { useNotify } from './useNotify';
 
@@ -20,7 +20,7 @@ export const SendV0Transaction: FC = () => {
 
             /**
              * This lookup table only exists on devnet and can be replaced as
-             * needed.  To create and manage a lookup table, use the `solana
+             * needed.  To create and manage a lookup table, use the `trezoa
              * address-lookup-table` commands.
              */
             const { value: lookupTable } = await connection.getAddressLookupTable(
@@ -38,7 +38,7 @@ export const SendV0Transaction: FC = () => {
                 recentBlockhash: blockhash,
                 instructions: [
                     {
-                        data: Buffer.from('Hello, from the Solana Wallet Adapter example app!'),
+                        data: Buffer.from('Hello, from the Trezoa Wallet Adapter example app!'),
                         keys: lookupTable.state.addresses.map((pubkey, index) => ({
                             pubkey,
                             isWritable: index % 2 == 0,

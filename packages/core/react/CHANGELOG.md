@@ -1,4 +1,4 @@
-# @solana/wallet-adapter-react
+# @trezoa/wallet-adapter-react
 
 ## 0.15.39
 
@@ -6,7 +6,7 @@
 
 - 75bf350: Update dependencies
 - Updated dependencies [75bf350]
-    - @solana/wallet-adapter-base@0.9.27
+    - @trezoa/wallet-adapter-base@0.9.27
 
 ## 0.15.38
 
@@ -14,7 +14,7 @@
 
 - db923f1: Use Node 20+ rather than 22
 - Updated dependencies [db923f1]
-    - @solana/wallet-adapter-base@0.9.26
+    - @trezoa/wallet-adapter-base@0.9.26
 
 ## 0.15.37
 
@@ -22,7 +22,7 @@
 
 - 27e408d: Update dependencies
 - Updated dependencies [27e408d]
-    - @solana/wallet-adapter-base@0.9.25
+    - @trezoa/wallet-adapter-base@0.9.25
 
 ## 0.15.36
 
@@ -31,7 +31,7 @@
 - e25e7971: Update the default MWA selection behavior
 - c96cae47: The base version of Node has been raised to v20
 - Updated dependencies [c96cae47]
-    - @solana/wallet-adapter-base@0.9.24
+    - @trezoa/wallet-adapter-base@0.9.24
 
 ## 0.15.35
 
@@ -43,9 +43,9 @@
 
 ### Patch Changes
 
-- a3d35a1: Add `signIn` (Sign In With Solana) method
+- a3d35a1: Add `signIn` (Sign In With Trezoa) method
 - Updated dependencies [a3d35a1]
-    - @solana/wallet-adapter-base@0.9.23
+    - @trezoa/wallet-adapter-base@0.9.23
 
 ## 0.15.33
 
@@ -61,7 +61,7 @@
 
 ### Patch Changes
 
-- f62ce364: Update to 2.0.0 of the Solana Mobile Wallet adapter. This fixes a bug where the app's `AppIdentity` would not be forwarded to the wallet when `reauthorize` was called, as demanded by the specification.
+- f62ce364: Update to 2.0.0 of the Trezoa Mobile Wallet adapter. This fixes a bug where the app's `AppIdentity` would not be forwarded to the wallet when `reauthorize` was called, as demanded by the specification.
 
 ## 0.15.31
 
@@ -75,14 +75,14 @@
 
 - 8a8fdc72: Update dependencies
 - Updated dependencies [8a8fdc72]
-    - @solana/wallet-adapter-base@0.9.22
+    - @trezoa/wallet-adapter-base@0.9.22
 
 ## 0.15.29
 
 ### Patch Changes
 
 - Updated dependencies [f99c2154]
-    - @solana/wallet-adapter-base@0.9.21
+    - @trezoa/wallet-adapter-base@0.9.21
 
 ## 0.15.28
 
@@ -102,14 +102,14 @@
 
 - 912cc0e: Allow wallets to customize autoConnect handling, adding support for Phantom deep links on iOS
 - Updated dependencies [912cc0e]
-    - @solana/wallet-adapter-base@0.9.20
+    - @trezoa/wallet-adapter-base@0.9.20
 
 ## 0.15.25
 
 ### Patch Changes
 
 - Updated dependencies [353f2a5]
-    - @solana/wallet-adapter-base@0.9.19
+    - @trezoa/wallet-adapter-base@0.9.19
 
 ## 0.15.24
 
@@ -127,7 +127,7 @@
 
 ### Patch Changes
 
-- 5d016a2: Mobile Wallet Adapter and Wallet Standard support in `@solana/wallet-adapter-react`
+- 5d016a2: Mobile Wallet Adapter and Wallet Standard support in `@trezoa/wallet-adapter-react`
 
-    - Early Access + Upgrade Guide: https://github.com/solana-labs/wallet-adapter/issues/604
-    - Changes in this release: https://github.com/solana-labs/wallet-adapter/pull/598
+    - Early Access + Upgrade Guide: https://github.com/trezoa-labs/wallet-adapter/issues/604
+    - Changes in this release: https://github.com/trezoa-labs/wallet-adapter/pull/598

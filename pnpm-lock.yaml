@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@solana/wallet-adapter-base': workspace:^
+  '@trezoa/wallet-adapter-base': workspace:^
   eslint: 8.22.0
   '@ngraveio/bc-ur': 1.1.12
   '@types/web': npm:typescript@^5.8.3
@@ -74,7 +74,7 @@ importers:
 
   packages/core/base:
     dependencies:
-      '@solana/wallet-standard-features':
+      '@trezoa/wallet-standard-features':
         specifier: ^1.3.0
         version: 1.3.0
       '@wallet-standard/base':
@@ -87,7 +87,7 @@ importers:
         specifier: ^5.0.1
         version: 5.0.1
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@types/node-fetch':
@@ -99,17 +99,17 @@ importers:
 
   packages/core/react:
     dependencies:
-      '@solana-mobile/wallet-adapter-mobile':
+      '@trezoa-mobile/wallet-adapter-mobile':
         specifier: ^2.2.0
-        version: 2.2.0(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
-      '@solana/wallet-adapter-base':
+        version: 2.2.0(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../base
-      '@solana/wallet-standard-wallet-adapter-react':
+      '@trezoa/wallet-standard-wallet-adapter-react':
         specifier: ^1.1.4
-        version: 1.1.4(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)
+        version: 1.1.4(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@types/jest':
@@ -160,25 +160,25 @@ importers:
       '@noble/curves':
         specifier: ^1.9.1
         version: 1.9.2
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
-      '@solana/wallet-adapter-react':
+      '@trezoa/wallet-adapter-react':
         specifier: workspace:^
         version: link:../../core/react
-      '@solana/wallet-adapter-react-ui':
+      '@trezoa/wallet-adapter-react-ui':
         specifier: workspace:^
         version: link:../../ui/react-ui
-      '@solana/wallet-adapter-wallets':
+      '@trezoa/wallet-adapter-wallets':
         specifier: workspace:^
         version: link:../../wallets/wallets
-      '@solana/wallet-standard-features':
+      '@trezoa/wallet-standard-features':
         specifier: ^1.3.0
         version: 1.3.0
-      '@solana/wallet-standard-util':
+      '@trezoa/wallet-standard-util':
         specifier: ^1.1.2
         version: 1.1.2
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       bs58:
@@ -224,19 +224,19 @@ importers:
 
   packages/starter/react-ui-starter:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
-      '@solana/wallet-adapter-react':
+      '@trezoa/wallet-adapter-react':
         specifier: workspace:^
         version: link:../../core/react
-      '@solana/wallet-adapter-react-ui':
+      '@trezoa/wallet-adapter-react-ui':
         specifier: workspace:^
         version: link:../../ui/react-ui
-      '@solana/wallet-adapter-wallets':
+      '@trezoa/wallet-adapter-wallets':
         specifier: workspace:^
         version: link:../../wallets/wallets
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       react:
@@ -270,11 +270,11 @@ importers:
 
   packages/ui/base-ui:
     dependencies:
-      '@solana/wallet-adapter-react':
+      '@trezoa/wallet-adapter-react':
         specifier: workspace:^
         version: link:../../core/react
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@types/react':
@@ -292,17 +292,17 @@ importers:
 
   packages/ui/react-ui:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
-      '@solana/wallet-adapter-base-ui':
+      '@trezoa/wallet-adapter-base-ui':
         specifier: workspace:^
         version: link:../base-ui
-      '@solana/wallet-adapter-react':
+      '@trezoa/wallet-adapter-react':
         specifier: workspace:^
         version: link:../../core/react
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@types/react':
@@ -323,11 +323,11 @@ importers:
 
   packages/wallets/alpha:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -336,11 +336,11 @@ importers:
 
   packages/wallets/avana:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -349,11 +349,11 @@ importers:
 
   packages/wallets/bitkeep:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -362,11 +362,11 @@ importers:
 
   packages/wallets/bitpie:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -375,11 +375,11 @@ importers:
 
   packages/wallets/clover:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -388,7 +388,7 @@ importers:
 
   packages/wallets/coin98:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
       bs58:
@@ -398,7 +398,7 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -407,11 +407,11 @@ importers:
 
   packages/wallets/coinbase:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -420,11 +420,11 @@ importers:
 
   packages/wallets/coinhub:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -433,14 +433,14 @@ importers:
 
   packages/wallets/fractal:
     dependencies:
-      '@fractalwagmi/solana-wallet-adapter':
+      '@fractalwagmi/trezoa-wallet-adapter':
         specifier: ^0.1.1
         version: 0.1.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -449,11 +449,11 @@ importers:
 
   packages/wallets/huobi:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -462,11 +462,11 @@ importers:
 
   packages/wallets/hyperpay:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -478,14 +478,14 @@ importers:
       '@keystonehq/sol-keyring':
         specifier: ^0.20.0
         version: 0.20.0(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
       buffer:
         specifier: ^6.0.3
         version: 6.0.3
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -494,11 +494,11 @@ importers:
 
   packages/wallets/krystal:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -516,14 +516,14 @@ importers:
       '@ledgerhq/hw-transport-webhid':
         specifier: ^6.30.1
         version: 6.30.2
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
       buffer:
         specifier: ^6.0.3
         version: 6.0.3
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@types/w3c-web-hid':
@@ -535,11 +535,11 @@ importers:
 
   packages/wallets/mathwallet:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -548,11 +548,11 @@ importers:
 
   packages/wallets/neko:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -561,11 +561,11 @@ importers:
 
   packages/wallets/nightly:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -574,11 +574,11 @@ importers:
 
   packages/wallets/nufi:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -587,11 +587,11 @@ importers:
 
   packages/wallets/onto:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -600,17 +600,17 @@ importers:
 
   packages/wallets/particle:
     dependencies:
-      '@particle-network/solana-wallet':
+      '@particle-network/trezoa-wallet':
         specifier: ^1.3.2
-        version: 1.3.2(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@6.0.0)
-      '@solana/wallet-adapter-base':
+        version: 1.3.2(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@6.0.0)
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
       '@metamask/eth-sig-util':
         specifier: ^8.2.0
         version: 8.2.0
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -619,11 +619,11 @@ importers:
 
   packages/wallets/phantom:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -632,11 +632,11 @@ importers:
 
   packages/wallets/safepal:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -645,11 +645,11 @@ importers:
 
   packages/wallets/saifu:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -658,14 +658,14 @@ importers:
 
   packages/wallets/salmon:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
       salmon-adapter-sdk:
         specifier: ^1.1.1
-        version: 1.1.1(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+        version: 1.1.1(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -674,36 +674,36 @@ importers:
 
   packages/wallets/sky:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
         specifier: ^0.4.0
         version: 0.4.0
 
-  packages/wallets/solflare:
+  packages/wallets/trzflare:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
-      '@solana/wallet-standard-chains':
+      '@trezoa/wallet-standard-chains':
         specifier: ^1.1.1
         version: 1.1.1
-      '@solflare-wallet/metamask-sdk':
+      '@trzflare-wallet/metamask-sdk':
         specifier: ^1.0.3
-        version: 1.0.3(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@solflare-wallet/sdk':
+        version: 1.0.3(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@trzflare-wallet/sdk':
         specifier: ^1.4.2
-        version: 1.4.2(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+        version: 1.4.2(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
       '@wallet-standard/wallet':
         specifier: ^1.1.0
         version: 1.1.0
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -712,11 +712,11 @@ importers:
 
   packages/wallets/solong:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -725,11 +725,11 @@ importers:
 
   packages/wallets/spot:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -738,11 +738,11 @@ importers:
 
   packages/wallets/tokenary:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -751,11 +751,11 @@ importers:
 
   packages/wallets/tokenpocket:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -764,10 +764,10 @@ importers:
 
   packages/wallets/torus:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
-      '@toruslabs/solana-embed':
+      '@toruslabs/trezoa-embed':
         specifier: ^2.1.0
         version: 2.1.0(@babel/runtime@7.27.0)(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       assert:
@@ -783,7 +783,7 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@types/readable-stream':
@@ -795,17 +795,17 @@ importers:
 
   packages/wallets/trezor:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
       '@trezor/connect-web':
         specifier: ^9.5.5
-        version: 9.6.0(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+        version: 9.6.0(@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       buffer:
         specifier: ^6.0.3
         version: 6.0.3
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -814,11 +814,11 @@ importers:
 
   packages/wallets/trust:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -830,17 +830,17 @@ importers:
       '@noble/curves':
         specifier: ^1.9.1
         version: 1.9.2
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
-      '@solana/wallet-standard-features':
+      '@trezoa/wallet-standard-features':
         specifier: ^1.3.0
         version: 1.3.0
-      '@solana/wallet-standard-util':
+      '@trezoa/wallet-standard-util':
         specifier: ^1.1.2
         version: 1.1.2
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -849,15 +849,15 @@ importers:
 
   packages/wallets/walletconnect:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.0
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
-      '@walletconnect/solana-adapter':
+      '@walletconnect/trezoa-adapter':
         specifier: ^0.0.8
-        version: 0.0.8(@react-native-async-storage/async-storage@1.24.0(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
+        version: 0.0.8(@react-native-async-storage/async-storage@1.24.0(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
     devDependencies:
       shx:
         specifier: ^0.4.0
@@ -865,116 +865,116 @@ importers:
 
   packages/wallets/wallets:
     dependencies:
-      '@solana/wallet-adapter-alpha':
+      '@trezoa/wallet-adapter-alpha':
         specifier: workspace:^
         version: link:../alpha
-      '@solana/wallet-adapter-avana':
+      '@trezoa/wallet-adapter-avana':
         specifier: workspace:^
         version: link:../avana
-      '@solana/wallet-adapter-bitkeep':
+      '@trezoa/wallet-adapter-bitkeep':
         specifier: workspace:^
         version: link:../bitkeep
-      '@solana/wallet-adapter-bitpie':
+      '@trezoa/wallet-adapter-bitpie':
         specifier: workspace:^
         version: link:../bitpie
-      '@solana/wallet-adapter-clover':
+      '@trezoa/wallet-adapter-clover':
         specifier: workspace:^
         version: link:../clover
-      '@solana/wallet-adapter-coin98':
+      '@trezoa/wallet-adapter-coin98':
         specifier: workspace:^
         version: link:../coin98
-      '@solana/wallet-adapter-coinbase':
+      '@trezoa/wallet-adapter-coinbase':
         specifier: workspace:^
         version: link:../coinbase
-      '@solana/wallet-adapter-coinhub':
+      '@trezoa/wallet-adapter-coinhub':
         specifier: workspace:^
         version: link:../coinhub
-      '@solana/wallet-adapter-fractal':
+      '@trezoa/wallet-adapter-fractal':
         specifier: workspace:^
         version: link:../fractal
-      '@solana/wallet-adapter-huobi':
+      '@trezoa/wallet-adapter-huobi':
         specifier: workspace:^
         version: link:../huobi
-      '@solana/wallet-adapter-hyperpay':
+      '@trezoa/wallet-adapter-hyperpay':
         specifier: workspace:^
         version: link:../hyperpay
-      '@solana/wallet-adapter-keystone':
+      '@trezoa/wallet-adapter-keystone':
         specifier: workspace:^
         version: link:../keystone
-      '@solana/wallet-adapter-krystal':
+      '@trezoa/wallet-adapter-krystal':
         specifier: workspace:^
         version: link:../krystal
-      '@solana/wallet-adapter-ledger':
+      '@trezoa/wallet-adapter-ledger':
         specifier: workspace:^
         version: link:../ledger
-      '@solana/wallet-adapter-mathwallet':
+      '@trezoa/wallet-adapter-mathwallet':
         specifier: workspace:^
         version: link:../mathwallet
-      '@solana/wallet-adapter-neko':
+      '@trezoa/wallet-adapter-neko':
         specifier: workspace:^
         version: link:../neko
-      '@solana/wallet-adapter-nightly':
+      '@trezoa/wallet-adapter-nightly':
         specifier: workspace:^
         version: link:../nightly
-      '@solana/wallet-adapter-nufi':
+      '@trezoa/wallet-adapter-nufi':
         specifier: workspace:^
         version: link:../nufi
-      '@solana/wallet-adapter-onto':
+      '@trezoa/wallet-adapter-onto':
         specifier: workspace:^
         version: link:../onto
-      '@solana/wallet-adapter-particle':
+      '@trezoa/wallet-adapter-particle':
         specifier: workspace:^
         version: link:../particle
-      '@solana/wallet-adapter-phantom':
+      '@trezoa/wallet-adapter-phantom':
         specifier: workspace:^
         version: link:../phantom
-      '@solana/wallet-adapter-safepal':
+      '@trezoa/wallet-adapter-safepal':
         specifier: workspace:^
         version: link:../safepal
-      '@solana/wallet-adapter-saifu':
+      '@trezoa/wallet-adapter-saifu':
         specifier: workspace:^
         version: link:../saifu
-      '@solana/wallet-adapter-salmon':
+      '@trezoa/wallet-adapter-salmon':
         specifier: workspace:^
         version: link:../salmon
-      '@solana/wallet-adapter-sky':
+      '@trezoa/wallet-adapter-sky':
         specifier: workspace:^
         version: link:../sky
-      '@solana/wallet-adapter-solflare':
+      '@trezoa/wallet-adapter-trzflare':
         specifier: workspace:^
-        version: link:../solflare
-      '@solana/wallet-adapter-solong':
+        version: link:../trzflare
+      '@trezoa/wallet-adapter-solong':
         specifier: workspace:^
         version: link:../solong
-      '@solana/wallet-adapter-spot':
+      '@trezoa/wallet-adapter-spot':
         specifier: workspace:^
         version: link:../spot
-      '@solana/wallet-adapter-tokenary':
+      '@trezoa/wallet-adapter-tokenary':
         specifier: workspace:^
         version: link:../tokenary
-      '@solana/wallet-adapter-tokenpocket':
+      '@trezoa/wallet-adapter-tokenpocket':
         specifier: workspace:^
         version: link:../tokenpocket
-      '@solana/wallet-adapter-torus':
+      '@trezoa/wallet-adapter-torus':
         specifier: workspace:^
         version: link:../torus
-      '@solana/wallet-adapter-trezor':
+      '@trezoa/wallet-adapter-trezor':
         specifier: workspace:^
         version: link:../trezor
-      '@solana/wallet-adapter-trust':
+      '@trezoa/wallet-adapter-trust':
         specifier: workspace:^
         version: link:../trust
-      '@solana/wallet-adapter-unsafe-burner':
+      '@trezoa/wallet-adapter-unsafe-burner':
         specifier: workspace:^
         version: link:../unsafe-burner
-      '@solana/wallet-adapter-walletconnect':
+      '@trezoa/wallet-adapter-walletconnect':
         specifier: workspace:^
         version: link:../walletconnect
-      '@solana/wallet-adapter-xdefi':
+      '@trezoa/wallet-adapter-xdefi':
         specifier: workspace:^
         version: link:../xdefi
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -983,11 +983,11 @@ importers:
 
   packages/wallets/xdefi:
     dependencies:
-      '@solana/wallet-adapter-base':
+      '@trezoa/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
     devDependencies:
-      '@solana/web3.js':
+      '@trezoa/web3.js':
         specifier: ^1.98.2
         version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       shx:
@@ -1387,7 +1387,7 @@ packages:
       react: ^17.0.2 || ^18
       react-dom: ^17.0.2 || ^18
 
-  '@fractalwagmi/solana-wallet-adapter@0.1.1':
+  '@fractalwagmi/trezoa-wallet-adapter@0.1.1':
     resolution: {integrity: sha512-oTZLEuD+zLKXyhZC5tDRMPKPj8iaxKLxXiCjqRfOo4xmSbS2izGRWLJbKMYYsJysn/OI3UJ3P6CWP8WUWi0dZg==}
 
   '@gerrit0/mini-shiki@3.2.3':
@@ -2348,10 +2348,10 @@ packages:
   '@particle-network/crypto@1.0.1':
     resolution: {integrity: sha512-GgvHmHcFiNkCLZdcJOgctSbgvs251yp+EAdUydOE3gSoIxN6KEr/Snu9DebENhd/nFb7FDk5ap0Hg49P7pj1fg==}
 
-  '@particle-network/solana-wallet@1.3.2':
+  '@particle-network/trezoa-wallet@1.3.2':
     resolution: {integrity: sha512-KviKVP87OtWq813y8IumM3rIQMNkTjHBaQmCUbTWGebz3csFOv54JIoy1r+3J3NnA+mBxBdZeRedZ5g+07v75w==}
     peerDependencies:
-      '@solana/web3.js': ^1.50.1
+      '@trezoa/web3.js': ^1.50.1
       bs58: ^4.0.1
 
   '@pkgr/core@0.2.4':
@@ -2365,7 +2365,7 @@ packages:
     resolution: {integrity: sha512-cpIb13aWPW8y4KzkZAPDgw+Kb+DXjCC6rZoH74MGm3I/6e/zKyGnfAuW5olb2zxonFqsYgnv7ev8MQnvSgJ3/g==}
     engines: {node: '>=10'}
     peerDependencies:
-      '@solana/web3.js': ^1.5.0
+      '@trezoa/web3.js': ^1.5.0
 
   '@protobufjs/aspromise@1.1.2':
     resolution: {integrity: sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==}
@@ -2534,344 +2534,344 @@ packages:
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
 
-  '@solana-mobile/mobile-wallet-adapter-protocol-web3js@2.2.0':
+  '@trezoa-mobile/mobile-wallet-adapter-protocol-web3js@2.2.0':
     resolution: {integrity: sha512-EVMlls3vgxmc2jYstdzWYujQ0s+22lEUt5JlaWYhG3aC27YfQgDP6e2zfSpdnKrLyOqMoz7bYYcti+Bx/QQPyg==}
     peerDependencies:
-      '@solana/web3.js': ^1.58.0
+      '@trezoa/web3.js': ^1.58.0
 
-  '@solana-mobile/mobile-wallet-adapter-protocol@2.2.1':
+  '@trezoa-mobile/mobile-wallet-adapter-protocol@2.2.1':
     resolution: {integrity: sha512-fAT7Rzdw8dQH0CHOGNnwFjpNaHoQ0HJEjVK6iS6KXKlRjOm2y2BM8ZkNAyqIWKD+uGCBwDPZHWwZaME72k17kA==}
     peerDependencies:
       react-native: '>0.69'
 
-  '@solana-mobile/wallet-adapter-mobile@2.2.0':
+  '@trezoa-mobile/wallet-adapter-mobile@2.2.0':
     resolution: {integrity: sha512-7xcx+i6D9HlXuVgKrlDVpBYrdhM8JVzrrhuges3ATfZvlZ5zwEnNenEuQCsG5Al8vgTvMBqX6KJ1dUFill0+Nw==}
     peerDependencies:
-      '@solana/web3.js': ^1.58.0
+      '@trezoa/web3.js': ^1.58.0
 
-  '@solana-mobile/wallet-standard-mobile@0.2.0':
+  '@trezoa-mobile/wallet-standard-mobile@0.2.0':
     resolution: {integrity: sha512-vAv95mID0682O8wLMzsbnMzfwL8EBtJVUOQiywjnwuTxMlYhSdjp0jJw05Otm/j9N1lbkZ9tbgANGHHL8wRmjw==}
     peerDependencies:
-      '@solana/web3.js': ^1.58.0
+      '@trezoa/web3.js': ^1.58.0
 
-  '@solana-program/compute-budget@0.7.0':
+  '@trezoa-program/compute-budget@0.7.0':
     resolution: {integrity: sha512-/JJSE1fKO5zx7Z55Z2tLGWBDDi7tUE+xMlK8qqkHlY51KpqksMsIBzQMkG9Dqhoe2Cnn5/t3QK1nJKqW6eHzpg==}
     peerDependencies:
-      '@solana/kit': ^2.1.0
+      '@trezoa/kit': ^2.1.0
 
-  '@solana-program/stake@0.2.1':
+  '@trezoa-program/stake@0.2.1':
     resolution: {integrity: sha512-ssNPsJv9XHaA+L7ihzmWGYcm/+XYURQ8UA3wQMKf6ccEHyHOUgoglkkDU/BoA0+wul6HxZUN0tHFymC0qFw6sg==}
     peerDependencies:
-      '@solana/kit': ^2.1.0
+      '@trezoa/kit': ^2.1.0
 
-  '@solana-program/system@0.7.0':
+  '@trezoa-program/system@0.7.0':
     resolution: {integrity: sha512-FKTBsKHpvHHNc1ATRm7SlC5nF/VdJtOSjldhcyfMN9R7xo712Mo2jHIzvBgn8zQO5Kg0DcWuKB7268Kv1ocicw==}
     peerDependencies:
-      '@solana/kit': ^2.1.0
+      '@trezoa/kit': ^2.1.0
 
-  '@solana-program/token-2022@0.4.2':
+  '@trezoa-program/token-2022@0.4.2':
     resolution: {integrity: sha512-zIpR5t4s9qEU3hZKupzIBxJ6nUV5/UVyIT400tu9vT1HMs5JHxaTTsb5GUhYjiiTvNwU0MQavbwc4Dl29L0Xvw==}
     peerDependencies:
-      '@solana/kit': ^2.1.0
-      '@solana/sysvars': ^2.1.0
+      '@trezoa/kit': ^2.1.0
+      '@trezoa/sysvars': ^2.1.0
 
-  '@solana-program/token@0.5.1':
+  '@trezoa-program/token@0.5.1':
     resolution: {integrity: sha512-bJvynW5q9SFuVOZ5vqGVkmaPGA0MCC+m9jgJj1nk5m20I389/ms69ASnhWGoOPNcie7S9OwBX0gTj2fiyWpfag==}
     peerDependencies:
-      '@solana/kit': ^2.1.0
+      '@trezoa/kit': ^2.1.0
 
-  '@solana/accounts@2.1.1':
+  '@trezoa/accounts@2.1.1':
     resolution: {integrity: sha512-Q9mG0o/6oyiUSw1CXCkG50TWlYiODJr3ZilEDLIyXpYJzOstRZM4XOzbRACveX4PXFoufPzpR1sSVK6qfcUUCw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/addresses@2.1.1':
+  '@trezoa/addresses@2.1.1':
     resolution: {integrity: sha512-yX6+brBXFmirxXDJCBDNKDYbGZHMZHaZS4NJWZs31DTe5To3Ky3Y9g3wFEGAX242kfNyJcgg5OeoBuZ7vdFycQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/assertions@2.1.1':
+  '@trezoa/assertions@2.1.1':
     resolution: {integrity: sha512-ln6dXkliyb9ybqLGFf5Gn+LJaPZGmer9KloIFfHiiSfYFdoAqOu6+pVY+323SKWXHG+hHl9VkwuZYpSp02OroA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/buffer-layout@4.0.1':
+  '@trezoa/buffer-layout@4.0.1':
     resolution: {integrity: sha512-E1ImOIAD1tBZFRdjeM4/pzTiTApC0AOBGwyAMS4fwIodCWArzJ3DWdoh8cKxeFM2fElkxBh2Aqts1BPC373rHA==}
     engines: {node: '>=5.10'}
 
-  '@solana/codecs-core@2.1.0':
+  '@trezoa/codecs-core@2.1.0':
     resolution: {integrity: sha512-SR7pKtmJBg2mhmkel2NeHA1pz06QeQXdMv8WJoIR9m8F/hw80K/612uaYbwTt2nkK0jg/Qn/rNSd7EcJ4SBGjw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5'
 
-  '@solana/codecs-core@2.1.1':
+  '@trezoa/codecs-core@2.1.1':
     resolution: {integrity: sha512-iPQW3UZ2Vi7QFBo2r9tw0NubtH8EdrhhmZulx6lC8V5a+qjaxovtM/q/UW2BTNpqqHLfO0tIcLyBLrNH4HTWPg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/codecs-data-structures@2.1.1':
+  '@trezoa/codecs-data-structures@2.1.1':
     resolution: {integrity: sha512-OcR7FIhWDFqg6gEslbs2GVKeDstGcSDpkZo9SeV4bm2RLd1EZfxGhWW+yHZfHqOZiIkw9w+aY45bFgKrsLQmFw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/codecs-numbers@2.1.0':
+  '@trezoa/codecs-numbers@2.1.0':
     resolution: {integrity: sha512-XMu4yw5iCgQnMKsxSWPPOrGgtaohmupN3eyAtYv3K3C/MJEc5V90h74k5B1GUCiHvcrdUDO9RclNjD9lgbjFag==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5'
 
-  '@solana/codecs-numbers@2.1.1':
+  '@trezoa/codecs-numbers@2.1.1':
     resolution: {integrity: sha512-m20IUPJhPUmPkHSlZ2iMAjJ7PaYUvlMtFhCQYzm9BEBSI6OCvXTG3GAPpAnSGRBfg5y+QNqqmKn4QHU3B6zzCQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/codecs-strings@2.1.1':
+  '@trezoa/codecs-strings@2.1.1':
     resolution: {integrity: sha512-uhj+A7eT6IJn4nuoX8jDdvZa7pjyZyN+k64EZ8+aUtJGt5Ft4NjRM8Jl5LljwYBWKQCgouVuigZHtTO2yAWExA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       fastestsmallesttextencoderdecoder: ^1.0.22
       typescript: '>=5.3.3'
 
-  '@solana/codecs@2.1.1':
+  '@trezoa/codecs@2.1.1':
     resolution: {integrity: sha512-89Fv22fZ5dNiXjOKh6I3U1D/lVO/dF/cPHexdiqjS5k5R5uKeK3506rhcnc4ciawQAoOkDwHzW+HitUumF2PJg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/errors@2.1.0':
+  '@trezoa/errors@2.1.0':
     resolution: {integrity: sha512-l+GxAv0Ar4d3c3PlZdA9G++wFYZREEbbRyAFP8+n8HSg0vudCuzogh/13io6hYuUhG/9Ve8ARZNamhV7UScKNw==}
     engines: {node: '>=20.18.0'}
     hasBin: true
     peerDependencies:
       typescript: '>=5'
 
-  '@solana/errors@2.1.1':
+  '@trezoa/errors@2.1.1':
     resolution: {integrity: sha512-sj6DaWNbSJFvLzT8UZoabMefQUfSW/8tXK7NTiagsDmh+Q87eyQDDC9L3z+mNmx9b6dEf6z660MOIplDD2nfEw==}
     engines: {node: '>=20.18.0'}
     hasBin: true
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/fast-stable-stringify@2.1.1':
+  '@trezoa/fast-stable-stringify@2.1.1':
     resolution: {integrity: sha512-+gyW8plyMOURMuO9iL6eQBb5wCRwMGLO5T6jBIDGws8KR4tOtIBlQnQnzk81nNepE6lbf8tLCxS8KdYgT/P+wQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/functional@2.1.1':
+  '@trezoa/functional@2.1.1':
     resolution: {integrity: sha512-HePJ49Cyz4Mb26zm5holPikm8bzsBH5zLR41+gIw9jJBmIteILNnk2OO1dVkb6aJnP42mdhWSXCo3VVEGT6aEw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/instructions@2.1.1':
+  '@trezoa/instructions@2.1.1':
     resolution: {integrity: sha512-Zx48hav9Lu+JuC+U0QJ8B7g7bXQZElXCjvxosIibU2C7ygDuq0ffOly0/irWJv2xmHYm6z8Hm1ILbZ5w0GhDQQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/keys@2.1.1':
+  '@trezoa/keys@2.1.1':
     resolution: {integrity: sha512-SXuhUz1c2mVnPnB+9Z9Yw6HPluIZbMlSByr+vPFLgaPYM356bRcNnu1pa28tONiQzRBFvl9qL08SL0OaYsmqPg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/kit@2.1.1':
+  '@trezoa/kit@2.1.1':
     resolution: {integrity: sha512-vV0otDSO9HFWIkAv7lxfeR7W6ruS/kqFYzTeRI+EuaZCgKdueavZnx9ydbpMCXis3BZ4Ao+k/ebzVWXMVvz+Lw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/nominal-types@2.1.1':
+  '@trezoa/nominal-types@2.1.1':
     resolution: {integrity: sha512-EpdDhuoATsm9bmuduv6yoNm1EKCz2tlq13nAazaVyQvkMBHhVelyT/zq0ruUplQZbl7qyYr5hG7p1SfGgQbgSQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/options@2.1.1':
+  '@trezoa/options@2.1.1':
     resolution: {integrity: sha512-rnEExUGVOAV79kiFUEl/51gmSbBYxlcuw2VPnbAV/q53mIHoTgCwDD576N9A8wFftxaJHQFBdNuKiRrnU/fFHA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/programs@2.1.1':
+  '@trezoa/programs@2.1.1':
     resolution: {integrity: sha512-fVOA4SEijrIrpG7GoBWhid43w3pT7RTfmMYciVKMb17s2GcnLLcTDOahPf0mlIctLtbF8PgImtzUkXQyuFGr8Q==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/promises@2.1.1':
+  '@trezoa/promises@2.1.1':
     resolution: {integrity: sha512-8M+QBgJAQD0nhHzaezwwHH4WWfJEBPiiPAjMNBbbbTHA8+oYFIGgY1HwDUePK8nrT1Q1dX3gC+epBCqBi/nnGg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-api@2.1.1':
+  '@trezoa/rpc-api@2.1.1':
     resolution: {integrity: sha512-MTBuoRA9HtxW+CRpj1Ls5XVhDe00g8mW2Ib4/0k6ThFS0+cmjf+O78d8hgjQMqTtuzzSLZ4355+C7XEAuzSQ4g==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-parsed-types@2.1.1':
+  '@trezoa/rpc-parsed-types@2.1.1':
     resolution: {integrity: sha512-+n1IWYYglevvNE1neMiLOH6W67EzmWj8GaRlwGxcyu6MwSc/8x1bd2hnEkgK6md+ObPOxoOBdxQXIY/xnZgLcw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-spec-types@2.1.1':
+  '@trezoa/rpc-spec-types@2.1.1':
     resolution: {integrity: sha512-3/G/MTi/c70TVZcB0DJjh5AGV7xqOYrjrpnIg+rLZuH65qHMimWiTHj0k8lxTzRMrN06Ed0+Q7SCw9hO/grTHA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-spec@2.1.1':
+  '@trezoa/rpc-spec@2.1.1':
     resolution: {integrity: sha512-3Hd21XpaKtW3tG0oXAUlc1k0hX7/eqHpf8Gg744sr9G3ib5gT7EopcZRsH5LdESgS0nbv/c75TznCXjaUyRi+g==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-subscriptions-api@2.1.1':
+  '@trezoa/rpc-subscriptions-api@2.1.1':
     resolution: {integrity: sha512-b4JuVScYGaEgO3jszYf7LqXdJK4GoUIevXcyQWq4Zk+R7P41VxGQWa2kzdPX9LIi+UGBmCThdRBfgOYyyHRKDg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-subscriptions-channel-websocket@2.1.1':
+  '@trezoa/rpc-subscriptions-channel-websocket@2.1.1':
     resolution: {integrity: sha512-xEDnMXnwMtKDEpzmIXTkxxvLqGsxqlKILmyfGsQOMJ9RHYkHmz/8MarHcjnYhyZ5lrs2irN/wExUNlSZTegSEw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
       ws: ^8.18.0
 
-  '@solana/rpc-subscriptions-spec@2.1.1':
+  '@trezoa/rpc-subscriptions-spec@2.1.1':
     resolution: {integrity: sha512-ANT5Tub/ZqqewRtklz02km8iCUe0qwBGi3wsKTgiX7kRx3izHn6IHl90w1Y19wPd692mfZW8+Pk5PUrMSXhR3g==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-subscriptions@2.1.1':
+  '@trezoa/rpc-subscriptions@2.1.1':
     resolution: {integrity: sha512-xGLIuJHxg0oCNiS40NW/5BPxHM5RurLcEmBAN1VmVtINWTm8wSbEo85a5q7cbMlPP4Vu/28lD7IITjS5qb84UQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-transformers@2.1.1':
+  '@trezoa/rpc-transformers@2.1.1':
     resolution: {integrity: sha512-rBOCDQjOI1eQICkqYFV43SsiPdLcahgnrGuDNorS3uOe70pQRPs1PTuuEHqLBwuu9GRw89ifRy49aBNUNmX8uQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-transport-http@2.1.1':
+  '@trezoa/rpc-transport-http@2.1.1':
     resolution: {integrity: sha512-Wp7018VaPqhodQjQTDlCM7vTYlm3AdmRyvPZiwv5uzFgnC8B0xhEZW+ZSt1zkSXS6WrKqtufobuBFGtfG6v5KQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc-types@2.1.1':
+  '@trezoa/rpc-types@2.1.1':
     resolution: {integrity: sha512-IaQKiWyTVvDoD0/3IlUxRY3OADj3cEjfLFCp1JvEdl0ANGReHp4jtqUqrYEeAdN/tGmGoiHt3n4x61wR0zFoJA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/rpc@2.1.1':
+  '@trezoa/rpc@2.1.1':
     resolution: {integrity: sha512-X15xAx8U0ATznkoNGPUkGIuxTIOmdew1pjQRHAtPSKQTiPbAnO1sowpt4UT7V7bB6zKPu+xKvhFizUuon0PZxg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/signers@2.1.1':
+  '@trezoa/signers@2.1.1':
     resolution: {integrity: sha512-OfYEUgrJSrBDTC43kSQCz9A12A9+6xt2azmG8pP78yXN/bDzDmYF2i4nSzg/JzjjA5hBBYtDJ+15qpS/4cSgug==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/subscribable@2.1.1':
+  '@trezoa/subscribable@2.1.1':
     resolution: {integrity: sha512-k6qe/Iu94nVtapap9Ei+3mm14gx1H+7YgB6n2bj9qJCdVN6z6ZN9nPtDY2ViIH4qAnxyh7pJKF7iCwNC/iALcw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/sysvars@2.1.1':
+  '@trezoa/sysvars@2.1.1':
     resolution: {integrity: sha512-bG7hNFpFqZm6qk763z5/P9g9Nxc0WXe+aYl6CQSptaPsmqUz1GhlBjAov9ePVFb29MmyMZ5bA+kmCTytiHK1fQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/transaction-confirmation@2.1.1':
+  '@trezoa/transaction-confirmation@2.1.1':
     resolution: {integrity: sha512-hXv0D80u1jNEq2/k1o9IBXXq7+JYg8x4tm0kVWjzvdJjYow8EkQay5quq5o0ciFfWqlOyFwYRC7AGrKc3imE7A==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/transaction-messages@2.1.1':
+  '@trezoa/transaction-messages@2.1.1':
     resolution: {integrity: sha512-sDf3OWV5X1C8huqsap+DyHIBAUenNJd3h7j/WI9MeIJZdGEtqxssGa2ixhecsMaevtUBKKJM9RqAvfTdRTAnLw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/transactions@2.1.1':
+  '@trezoa/transactions@2.1.1':
     resolution: {integrity: sha512-LX/7XfcHH9o0Kpv+tpnCl56IaatD/0sMWw9NnaeZ2f7pJyav9Jmeu5LJXvdHJw2jh277UEqc9bHwKruoMrtOTw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@solana/wallet-standard-chains@1.1.1':
+  '@trezoa/wallet-standard-chains@1.1.1':
     resolution: {integrity: sha512-Us3TgL4eMVoVWhuC4UrePlYnpWN+lwteCBlhZDUhFZBJ5UMGh94mYPXno3Ho7+iHPYRtuCi/ePvPcYBqCGuBOw==}
     engines: {node: '>=16'}
 
-  '@solana/wallet-standard-core@1.1.2':
+  '@trezoa/wallet-standard-core@1.1.2':
     resolution: {integrity: sha512-FaSmnVsIHkHhYlH8XX0Y4TYS+ebM+scW7ZeDkdXo3GiKge61Z34MfBPinZSUMV08hCtzxxqH2ydeU9+q/KDrLA==}
     engines: {node: '>=16'}
 
-  '@solana/wallet-standard-features@1.3.0':
+  '@trezoa/wallet-standard-features@1.3.0':
     resolution: {integrity: sha512-ZhpZtD+4VArf6RPitsVExvgkF+nGghd1rzPjd97GmBximpnt1rsUxMOEyoIEuH3XBxPyNB6Us7ha7RHWQR+abg==}
     engines: {node: '>=16'}
 
-  '@solana/wallet-standard-util@1.1.2':
+  '@trezoa/wallet-standard-util@1.1.2':
     resolution: {integrity: sha512-rUXFNP4OY81Ddq7qOjQV4Kmkozx4wjYAxljvyrqPx8Ycz0FYChG/hQVWqvgpK3sPsEaO/7ABG1NOACsyAKWNOA==}
     engines: {node: '>=16'}
 
-  '@solana/wallet-standard-wallet-adapter-base@1.1.4':
+  '@trezoa/wallet-standard-wallet-adapter-base@1.1.4':
     resolution: {integrity: sha512-Q2Rie9YaidyFA4UxcUIxUsvynW+/gE2noj/Wmk+IOwDwlVrJUAXCvFaCNsPDSyKoiYEKxkSnlG13OA1v08G4iw==}
     engines: {node: '>=16'}
     peerDependencies:
-      '@solana/web3.js': ^1.98.0
+      '@trezoa/web3.js': ^1.98.0
       bs58: ^6.0.0
 
-  '@solana/wallet-standard-wallet-adapter-react@1.1.4':
+  '@trezoa/wallet-standard-wallet-adapter-react@1.1.4':
     resolution: {integrity: sha512-xa4KVmPgB7bTiWo4U7lg0N6dVUtt2I2WhEnKlIv0jdihNvtyhOjCKMjucWet6KAVhir6I/mSWrJk1U9SvVvhCg==}
     engines: {node: '>=16'}
     peerDependencies:
-      '@solana/wallet-adapter-base': workspace:^
+      '@trezoa/wallet-adapter-base': workspace:^
       react: '*'
 
-  '@solana/wallet-standard-wallet-adapter@1.1.4':
+  '@trezoa/wallet-standard-wallet-adapter@1.1.4':
     resolution: {integrity: sha512-YSBrxwov4irg2hx9gcmM4VTew3ofNnkqsXQ42JwcS6ykF1P1ecVY8JCbrv75Nwe6UodnqeoZRbN7n/p3awtjNQ==}
     engines: {node: '>=16'}
 
-  '@solana/wallet-standard@1.1.4':
+  '@trezoa/wallet-standard@1.1.4':
     resolution: {integrity: sha512-NF+MI5tOxyvfTU4A+O5idh/gJFmjm52bMwsPpFGRSL79GECSN0XLmpVOO/jqTKJgac2uIeYDpQw/eMaQuWuUXw==}
     engines: {node: '>=16'}
 
-  '@solana/web3.js@1.98.2':
+  '@trezoa/web3.js@1.98.2':
     resolution: {integrity: sha512-BqVwEG+TaG2yCkBMbD3C4hdpustR4FpuUFRPUmqRZYYlPI9Hg4XMWxHWOWRzHE9Lkc9NDjzXFX7lDXSgzC7R1A==}
 
-  '@solflare-wallet/metamask-sdk@1.0.3':
+  '@trzflare-wallet/metamask-sdk@1.0.3':
     resolution: {integrity: sha512-os5Px5PTMYKGS5tzOoyjDxtOtj0jZKnbI1Uwt8+Jsw1HHIA+Ib2UACCGNhQ/un2f8sIbTfLD1WuucNMOy8KZpQ==}
     peerDependencies:
-      '@solana/web3.js': '*'
+      '@trezoa/web3.js': '*'
 
-  '@solflare-wallet/sdk@1.4.2':
+  '@trzflare-wallet/sdk@1.4.2':
     resolution: {integrity: sha512-jrseNWipwl9xXZgrzwZF3hhL0eIVxuEtoZOSLmuPuef7FgHjstuTtNJAeT4icA7pzdDV4hZvu54pI2r2f7SmrQ==}
     peerDependencies:
-      '@solana/web3.js': '*'
+      '@trezoa/web3.js': '*'
 
   '@stellar/js-xdr@3.1.2':
     resolution: {integrity: sha512-VVolPL5goVEIsvuGqDc5uiKxV03lzfWdvYg1KikvwheDmTBO68CKDji3bAZ/kppZrx5iTA8z3Ld5yuytcvhvOQ==}
@@ -3017,7 +3017,7 @@ packages:
     peerDependencies:
       '@babel/runtime': 7.x
 
-  '@toruslabs/solana-embed@2.1.0':
+  '@toruslabs/trezoa-embed@2.1.0':
     resolution: {integrity: sha512-rgZniKy+yuqJp8/Z/RcqzhTL4iCH+4nP55XD5T2nEIajAClsmonsGp24AUqYwEqu+7x2hjumZEh+12rUv+Ippw==}
     engines: {node: '>=18.x', npm: '>=9.x'}
     peerDependencies:
@@ -3395,11 +3395,11 @@ packages:
   '@walletconnect/sign-client@2.19.1':
     resolution: {integrity: sha512-OgBHRPo423S02ceN3lAzcZ3MYb1XuLyTTkKqLmKp/icYZCyRzm3/ynqJDKndiBLJ5LTic0y07LiZilnliYqlvw==}
 
-  '@walletconnect/solana-adapter@0.0.8':
+  '@walletconnect/trezoa-adapter@0.0.8':
     resolution: {integrity: sha512-Qb7MT8SdkeBldfUCmF+rYW6vL98mxPuT1yAwww5X2vpx7xEPZvFCoAKnyT5fXu0v56rMxhW3MGejnHyyYdDY7Q==}
     peerDependencies:
-      '@solana/wallet-adapter-base': workspace:^
-      '@solana/web3.js': 1.x
+      '@trezoa/wallet-adapter-base': workspace:^
+      '@trezoa/web3.js': 1.x
 
   '@walletconnect/time@1.0.2':
     resolution: {integrity: sha512-uzdd9woDcJ1AaBZRhqy5rNC9laqWGErfc4dxA9a87mPdKOgWMD85mcFo9dIYIts/Jwocfwn07EC6EzclKubk/g==}
@@ -6410,7 +6410,7 @@ packages:
   salmon-adapter-sdk@1.1.1:
     resolution: {integrity: sha512-28ysSzmDjx2AbotxSggqdclh9MCwlPJUldKkCph48oS5Xtwu0QOg8T9ZRHS2Mben4Y8sTq6VvxXznKssCYFBJA==}
     peerDependencies:
-      '@solana/web3.js': ^1.44.3
+      '@trezoa/web3.js': ^1.44.3
 
   saxes@6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
@@ -7912,10 +7912,10 @@ snapshots:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@fractalwagmi/solana-wallet-adapter@0.1.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@fractalwagmi/trezoa-wallet-adapter@0.1.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@fractalwagmi/popup-connection': 1.1.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@solana/wallet-adapter-base': link:packages/core/base
+      '@trezoa/wallet-adapter-base': link:packages/core/base
       bs58: 5.0.0
     transitivePeerDependencies:
       - react
@@ -8254,7 +8254,7 @@ snapshots:
       '@keystonehq/bc-ur-registry': 0.5.4
       '@keystonehq/bc-ur-registry-sol': 0.9.5
       '@keystonehq/sdk': 0.19.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       bs58: 5.0.0
       uuid: 8.3.2
     transitivePeerDependencies:
@@ -9355,19 +9355,19 @@ snapshots:
       crypto-js: 4.2.0
       uuidv4: 6.2.13
 
-  '@particle-network/solana-wallet@1.3.2(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@6.0.0)':
+  '@particle-network/trezoa-wallet@1.3.2(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@6.0.0)':
     dependencies:
       '@particle-network/auth': 1.3.1
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       bs58: 6.0.0
 
   '@pkgr/core@0.2.4': {}
 
   '@popperjs/core@2.11.8': {}
 
-  '@project-serum/sol-wallet-adapter@0.2.6(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@project-serum/sol-wallet-adapter@0.2.6(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       bs58: 4.0.1
       eventemitter3: 4.0.7
 
@@ -9742,37 +9742,37 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@solana-mobile/mobile-wallet-adapter-protocol-web3js@2.2.0(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)':
+  '@trezoa-mobile/mobile-wallet-adapter-protocol-web3js@2.2.0(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)':
     dependencies:
-      '@solana-mobile/mobile-wallet-adapter-protocol': 2.2.1(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa-mobile/mobile-wallet-adapter-protocol': 2.2.1(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       bs58: 5.0.0
       js-base64: 3.7.7
     transitivePeerDependencies:
-      - '@solana/wallet-adapter-base'
+      - '@trezoa/wallet-adapter-base'
       - react
       - react-native
 
-  '@solana-mobile/mobile-wallet-adapter-protocol@2.2.1(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)':
+  '@trezoa-mobile/mobile-wallet-adapter-protocol@2.2.1(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)':
     dependencies:
-      '@solana/wallet-standard': 1.1.4(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)
-      '@solana/wallet-standard-util': 1.1.2
+      '@trezoa/wallet-standard': 1.1.4(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)
+      '@trezoa/wallet-standard-util': 1.1.2
       '@wallet-standard/core': 1.1.1
       js-base64: 3.7.7
       react-native: 0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
-      - '@solana/wallet-adapter-base'
-      - '@solana/web3.js'
+      - '@trezoa/wallet-adapter-base'
+      - '@trezoa/web3.js'
       - bs58
       - react
 
-  '@solana-mobile/wallet-adapter-mobile@2.2.0(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)':
+  '@trezoa-mobile/wallet-adapter-mobile@2.2.0(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)':
     dependencies:
-      '@solana-mobile/mobile-wallet-adapter-protocol-web3js': 2.2.0(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
-      '@solana-mobile/wallet-standard-mobile': 0.2.0(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
-      '@solana/wallet-adapter-base': link:packages/core/base
-      '@solana/wallet-standard-features': 1.3.0
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa-mobile/mobile-wallet-adapter-protocol-web3js': 2.2.0(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
+      '@trezoa-mobile/wallet-standard-mobile': 0.2.0(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
+      '@trezoa/wallet-adapter-base': link:packages/core/base
+      '@trezoa/wallet-standard-features': 1.3.0
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       js-base64: 3.7.7
     optionalDependencies:
       '@react-native-async-storage/async-storage': 1.24.0(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))
@@ -9780,488 +9780,488 @@ snapshots:
       - react
       - react-native
 
-  '@solana-mobile/wallet-standard-mobile@0.2.0(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)':
+  '@trezoa-mobile/wallet-standard-mobile@0.2.0(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)':
     dependencies:
-      '@solana-mobile/mobile-wallet-adapter-protocol-web3js': 2.2.0(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
-      '@solana/wallet-standard-chains': 1.1.1
-      '@solana/wallet-standard-features': 1.3.0
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa-mobile/mobile-wallet-adapter-protocol-web3js': 2.2.0(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)
+      '@trezoa/wallet-standard-chains': 1.1.1
+      '@trezoa/wallet-standard-features': 1.3.0
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@wallet-standard/base': 1.1.0
       '@wallet-standard/features': 1.1.0
       bs58: 5.0.0
       js-base64: 3.7.7
       qrcode: 1.5.4
     transitivePeerDependencies:
-      - '@solana/wallet-adapter-base'
+      - '@trezoa/wallet-adapter-base'
       - react
       - react-native
 
-  '@solana-program/compute-budget@0.7.0(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))':
+  '@trezoa-program/compute-budget@0.7.0(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))':
     dependencies:
-      '@solana/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
 
-  '@solana-program/stake@0.2.1(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))':
+  '@trezoa-program/stake@0.2.1(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))':
     dependencies:
-      '@solana/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
 
-  '@solana-program/system@0.7.0(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))':
+  '@trezoa-program/system@0.7.0(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))':
     dependencies:
-      '@solana/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
 
-  '@solana-program/token-2022@0.4.2(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))':
+  '@trezoa-program/token-2022@0.4.2(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))(@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))':
     dependencies:
-      '@solana/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      '@solana/sysvars': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/sysvars': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
 
-  '@solana-program/token@0.5.1(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))':
+  '@trezoa-program/token@0.5.1(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))':
     dependencies:
-      '@solana/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
 
-  '@solana/accounts@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/accounts@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/addresses@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/addresses@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/assertions': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/nominal-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/assertions': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/assertions@2.1.1(typescript@5.8.3)':
+  '@trezoa/assertions@2.1.1(typescript@5.8.3)':
     dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@solana/buffer-layout@4.0.1':
+  '@trezoa/buffer-layout@4.0.1':
     dependencies:
       buffer: 6.0.3
 
-  '@solana/codecs-core@2.1.0(typescript@5.8.3)':
+  '@trezoa/codecs-core@2.1.0(typescript@5.8.3)':
     dependencies:
-      '@solana/errors': 2.1.0(typescript@5.8.3)
+      '@trezoa/errors': 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@solana/codecs-core@2.1.1(typescript@5.8.3)':
+  '@trezoa/codecs-core@2.1.1(typescript@5.8.3)':
     dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@solana/codecs-data-structures@2.1.1(typescript@5.8.3)':
+  '@trezoa/codecs-data-structures@2.1.1(typescript@5.8.3)':
     dependencies:
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@solana/codecs-numbers@2.1.0(typescript@5.8.3)':
+  '@trezoa/codecs-numbers@2.1.0(typescript@5.8.3)':
     dependencies:
-      '@solana/codecs-core': 2.1.0(typescript@5.8.3)
-      '@solana/errors': 2.1.0(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.0(typescript@5.8.3)
+      '@trezoa/errors': 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@solana/codecs-numbers@2.1.1(typescript@5.8.3)':
+  '@trezoa/codecs-numbers@2.1.1(typescript@5.8.3)':
     dependencies:
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@solana/codecs-strings@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/codecs-strings@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       fastestsmallesttextencoderdecoder: 1.0.22
       typescript: 5.8.3
 
-  '@solana/codecs@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/codecs@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-data-structures': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/options': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/options': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/errors@2.1.0(typescript@5.8.3)':
+  '@trezoa/errors@2.1.0(typescript@5.8.3)':
     dependencies:
       chalk: 5.4.1
       commander: 13.1.0
       typescript: 5.8.3
 
-  '@solana/errors@2.1.1(typescript@5.8.3)':
+  '@trezoa/errors@2.1.1(typescript@5.8.3)':
     dependencies:
       chalk: 5.4.1
       commander: 13.1.0
       typescript: 5.8.3
 
-  '@solana/fast-stable-stringify@2.1.1(typescript@5.8.3)':
+  '@trezoa/fast-stable-stringify@2.1.1(typescript@5.8.3)':
     dependencies:
       typescript: 5.8.3
 
-  '@solana/functional@2.1.1(typescript@5.8.3)':
+  '@trezoa/functional@2.1.1(typescript@5.8.3)':
     dependencies:
       typescript: 5.8.3
 
-  '@solana/instructions@2.1.1(typescript@5.8.3)':
+  '@trezoa/instructions@2.1.1(typescript@5.8.3)':
     dependencies:
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@solana/keys@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/keys@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/assertions': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/nominal-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/assertions': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
     dependencies:
-      '@solana/accounts': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/codecs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/functional': 2.1.1(typescript@5.8.3)
-      '@solana/instructions': 2.1.1(typescript@5.8.3)
-      '@solana/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/programs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-parsed-types': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-subscriptions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/signers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/sysvars': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transaction-confirmation': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      '@solana/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/accounts': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/functional': 2.1.1(typescript@5.8.3)
+      '@trezoa/instructions': 2.1.1(typescript@5.8.3)
+      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/programs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-parsed-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/signers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/sysvars': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-confirmation': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
       - ws
 
-  '@solana/nominal-types@2.1.1(typescript@5.8.3)':
+  '@trezoa/nominal-types@2.1.1(typescript@5.8.3)':
     dependencies:
       typescript: 5.8.3
 
-  '@solana/options@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/options@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-data-structures': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - fastestsmallesttextencoderdecoder
-
-  '@solana/programs@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/promises@2.1.1(typescript@5.8.3)':
+  '@trezoa/programs@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      typescript: 5.8.3
-
-  '@solana/rpc-api@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-parsed-types': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/rpc-parsed-types@2.1.1(typescript@5.8.3)':
+  '@trezoa/promises@2.1.1(typescript@5.8.3)':
     dependencies:
       typescript: 5.8.3
 
-  '@solana/rpc-spec-types@2.1.1(typescript@5.8.3)':
+  '@trezoa/rpc-api@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      typescript: 5.8.3
-
-  '@solana/rpc-spec@2.1.1(typescript@5.8.3)':
-    dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      typescript: 5.8.3
-
-  '@solana/rpc-subscriptions-api@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-subscriptions-spec': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-parsed-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/rpc-subscriptions-channel-websocket@2.1.1(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@trezoa/rpc-parsed-types@2.1.1(typescript@5.8.3)':
     dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/functional': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-subscriptions-spec': 2.1.1(typescript@5.8.3)
-      '@solana/subscribable': 2.1.1(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/rpc-spec-types@2.1.1(typescript@5.8.3)':
+    dependencies:
+      typescript: 5.8.3
+
+  '@trezoa/rpc-spec@2.1.1(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/rpc-subscriptions-api@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-spec': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/rpc-subscriptions-channel-websocket@2.1.1(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+    dependencies:
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/functional': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-spec': 2.1.1(typescript@5.8.3)
+      '@trezoa/subscribable': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
       ws: 8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
-  '@solana/rpc-subscriptions-spec@2.1.1(typescript@5.8.3)':
+  '@trezoa/rpc-subscriptions-spec@2.1.1(typescript@5.8.3)':
     dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/promises': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@solana/subscribable': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/promises': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/subscribable': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@solana/rpc-subscriptions@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@trezoa/rpc-subscriptions@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
     dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/fast-stable-stringify': 2.1.1(typescript@5.8.3)
-      '@solana/functional': 2.1.1(typescript@5.8.3)
-      '@solana/promises': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-subscriptions-api': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-subscriptions-channel-websocket': 2.1.1(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      '@solana/rpc-subscriptions-spec': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/subscribable': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/fast-stable-stringify': 2.1.1(typescript@5.8.3)
+      '@trezoa/functional': 2.1.1(typescript@5.8.3)
+      '@trezoa/promises': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-api': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-channel-websocket': 2.1.1(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/rpc-subscriptions-spec': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/subscribable': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
       - ws
 
-  '@solana/rpc-transformers@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/rpc-transformers@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/functional': 2.1.1(typescript@5.8.3)
-      '@solana/nominal-types': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/functional': 2.1.1(typescript@5.8.3)
+      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/rpc-transport-http@2.1.1(typescript@5.8.3)':
+  '@trezoa/rpc-transport-http@2.1.1(typescript@5.8.3)':
     dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
       undici-types: 7.10.0
 
-  '@solana/rpc-types@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/rpc-types@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/nominal-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/rpc@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/rpc@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/fast-stable-stringify': 2.1.1(typescript@5.8.3)
-      '@solana/functional': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-api': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-spec': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-transport-http': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/fast-stable-stringify': 2.1.1(typescript@5.8.3)
+      '@trezoa/functional': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-api': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-spec': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-transport-http': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/signers@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/signers@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/instructions': 2.1.1(typescript@5.8.3)
-      '@solana/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/nominal-types': 2.1.1(typescript@5.8.3)
-      '@solana/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/instructions': 2.1.1(typescript@5.8.3)
+      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/subscribable@2.1.1(typescript@5.8.3)':
+  '@trezoa/subscribable@2.1.1(typescript@5.8.3)':
     dependencies:
-      '@solana/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/accounts': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/codecs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/accounts': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/transaction-confirmation@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@trezoa/transaction-confirmation@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
     dependencies:
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/promises': 2.1.1(typescript@5.8.3)
-      '@solana/rpc': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/rpc-subscriptions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/promises': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
       - ws
 
-  '@solana/transaction-messages@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/transaction-messages@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-data-structures': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/functional': 2.1.1(typescript@5.8.3)
-      '@solana/instructions': 2.1.1(typescript@5.8.3)
-      '@solana/nominal-types': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/functional': 2.1.1(typescript@5.8.3)
+      '@trezoa/instructions': 2.1.1(typescript@5.8.3)
+      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/transactions@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/transactions@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@solana/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/codecs-core': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-data-structures': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/errors': 2.1.1(typescript@5.8.3)
-      '@solana/functional': 2.1.1(typescript@5.8.3)
-      '@solana/instructions': 2.1.1(typescript@5.8.3)
-      '@solana/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/nominal-types': 2.1.1(typescript@5.8.3)
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@solana/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/functional': 2.1.1(typescript@5.8.3)
+      '@trezoa/instructions': 2.1.1(typescript@5.8.3)
+      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@solana/wallet-standard-chains@1.1.1':
+  '@trezoa/wallet-standard-chains@1.1.1':
     dependencies:
       '@wallet-standard/base': 1.1.0
 
-  '@solana/wallet-standard-core@1.1.2':
+  '@trezoa/wallet-standard-core@1.1.2':
     dependencies:
-      '@solana/wallet-standard-chains': 1.1.1
-      '@solana/wallet-standard-features': 1.3.0
-      '@solana/wallet-standard-util': 1.1.2
+      '@trezoa/wallet-standard-chains': 1.1.1
+      '@trezoa/wallet-standard-features': 1.3.0
+      '@trezoa/wallet-standard-util': 1.1.2
 
-  '@solana/wallet-standard-features@1.3.0':
+  '@trezoa/wallet-standard-features@1.3.0':
     dependencies:
       '@wallet-standard/base': 1.1.0
       '@wallet-standard/features': 1.1.0
 
-  '@solana/wallet-standard-util@1.1.2':
+  '@trezoa/wallet-standard-util@1.1.2':
     dependencies:
       '@noble/curves': 1.9.2
-      '@solana/wallet-standard-chains': 1.1.1
-      '@solana/wallet-standard-features': 1.3.0
+      '@trezoa/wallet-standard-chains': 1.1.1
+      '@trezoa/wallet-standard-features': 1.3.0
 
-  '@solana/wallet-standard-wallet-adapter-base@1.1.4(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)':
+  '@trezoa/wallet-standard-wallet-adapter-base@1.1.4(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)':
     dependencies:
-      '@solana/wallet-adapter-base': link:packages/core/base
-      '@solana/wallet-standard-chains': 1.1.1
-      '@solana/wallet-standard-features': 1.3.0
-      '@solana/wallet-standard-util': 1.1.2
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa/wallet-adapter-base': link:packages/core/base
+      '@trezoa/wallet-standard-chains': 1.1.1
+      '@trezoa/wallet-standard-features': 1.3.0
+      '@trezoa/wallet-standard-util': 1.1.2
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@wallet-standard/app': 1.1.0
       '@wallet-standard/base': 1.1.0
       '@wallet-standard/features': 1.1.0
       '@wallet-standard/wallet': 1.1.0
       bs58: 5.0.0
 
-  '@solana/wallet-standard-wallet-adapter-react@1.1.4(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)':
+  '@trezoa/wallet-standard-wallet-adapter-react@1.1.4(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)':
     dependencies:
-      '@solana/wallet-adapter-base': link:packages/core/base
-      '@solana/wallet-standard-wallet-adapter-base': 1.1.4(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)
+      '@trezoa/wallet-adapter-base': link:packages/core/base
+      '@trezoa/wallet-standard-wallet-adapter-base': 1.1.4(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)
       '@wallet-standard/app': 1.1.0
       '@wallet-standard/base': 1.1.0
       react: 19.1.0
     transitivePeerDependencies:
-      - '@solana/web3.js'
+      - '@trezoa/web3.js'
       - bs58
 
-  '@solana/wallet-standard-wallet-adapter@1.1.4(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)':
+  '@trezoa/wallet-standard-wallet-adapter@1.1.4(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)':
     dependencies:
-      '@solana/wallet-standard-wallet-adapter-base': 1.1.4(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)
-      '@solana/wallet-standard-wallet-adapter-react': 1.1.4(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)
+      '@trezoa/wallet-standard-wallet-adapter-base': 1.1.4(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)
+      '@trezoa/wallet-standard-wallet-adapter-react': 1.1.4(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)
     transitivePeerDependencies:
-      - '@solana/wallet-adapter-base'
-      - '@solana/web3.js'
+      - '@trezoa/wallet-adapter-base'
+      - '@trezoa/web3.js'
       - bs58
       - react
 
-  '@solana/wallet-standard@1.1.4(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)':
+  '@trezoa/wallet-standard@1.1.4(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)':
     dependencies:
-      '@solana/wallet-standard-core': 1.1.2
-      '@solana/wallet-standard-wallet-adapter': 1.1.4(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)
+      '@trezoa/wallet-standard-core': 1.1.2
+      '@trezoa/wallet-standard-wallet-adapter': 1.1.4(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bs58@5.0.0)(react@19.1.0)
     transitivePeerDependencies:
-      - '@solana/wallet-adapter-base'
-      - '@solana/web3.js'
+      - '@trezoa/wallet-adapter-base'
+      - '@trezoa/web3.js'
       - bs58
       - react
 
-  '@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.0
       '@noble/curves': 1.9.2
       '@noble/hashes': 1.7.2
-      '@solana/buffer-layout': 4.0.1
-      '@solana/codecs-numbers': 2.1.0(typescript@5.8.3)
+      '@trezoa/buffer-layout': 4.0.1
+      '@trezoa/codecs-numbers': 2.1.0(typescript@5.8.3)
       agentkeepalive: 4.6.0
       bn.js: 5.2.1
       borsh: 0.7.0
@@ -10278,18 +10278,18 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@solflare-wallet/metamask-sdk@1.0.3(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@trzflare-wallet/metamask-sdk@1.0.3(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
-      '@solana/wallet-standard-features': 1.3.0
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa/wallet-standard-features': 1.3.0
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@wallet-standard/base': 1.1.0
       bs58: 5.0.0
       eventemitter3: 5.0.1
       uuid: 9.0.1
 
-  '@solflare-wallet/sdk@1.4.2(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@trzflare-wallet/sdk@1.4.2(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       bs58: 5.0.0
       eventemitter3: 5.0.1
       uuid: 9.0.1
@@ -10459,10 +10459,10 @@ snapshots:
       base64url: 3.0.1
       color: 4.2.3
 
-  '@toruslabs/solana-embed@2.1.0(@babel/runtime@7.27.0)(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@toruslabs/trezoa-embed@2.1.0(@babel/runtime@7.27.0)(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.0
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@toruslabs/base-controllers': 5.11.0(@babel/runtime@7.27.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@toruslabs/http-helpers': 6.1.1(@babel/runtime@7.27.0)
       '@toruslabs/openlogin-jrpc': 8.3.0(@babel/runtime@7.27.0)
@@ -10512,13 +10512,13 @@ snapshots:
       - react-native
       - utf-8-validate
 
-  '@trezor/blockchain-link@2.5.0(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@trezor/blockchain-link@2.5.0(@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
     dependencies:
-      '@solana-program/stake': 0.2.1(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
-      '@solana-program/token': 0.5.1(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
-      '@solana-program/token-2022': 0.4.2(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))
-      '@solana/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      '@solana/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa-program/stake': 0.2.1(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
+      '@trezoa-program/token': 0.5.1(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
+      '@trezoa-program/token-2022': 0.4.2(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))(@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))
+      '@trezoa/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       '@stellar/stellar-sdk': 13.3.0
       '@trezor/blockchain-link-types': 1.4.0(tslib@2.8.1)
       '@trezor/blockchain-link-utils': 1.4.0(bufferutil@4.0.9)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(utf-8-validate@5.0.10)
@@ -10532,7 +10532,7 @@ snapshots:
       tslib: 2.8.1
       xrpl: 4.2.5(bufferutil@4.0.9)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
-      - '@solana/sysvars'
+      - '@trezoa/sysvars'
       - bufferutil
       - debug
       - encoding
@@ -10566,14 +10566,14 @@ snapshots:
       - expo-localization
       - react-native
 
-  '@trezor/connect-web@9.6.0(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@trezor/connect-web@9.6.0(@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
     dependencies:
-      '@trezor/connect': 9.6.0(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezor/connect': 9.6.0(@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       '@trezor/connect-common': 0.4.0(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)
       '@trezor/utils': 9.4.0(tslib@2.8.1)
       tslib: 2.8.1
     transitivePeerDependencies:
-      - '@solana/sysvars'
+      - '@trezoa/sysvars'
       - bufferutil
       - debug
       - encoding
@@ -10586,7 +10586,7 @@ snapshots:
       - utf-8-validate
       - ws
 
-  '@trezor/connect@9.6.0(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@trezor/connect@9.6.0(@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
     dependencies:
       '@ethereumjs/common': 10.0.0
       '@ethereumjs/tx': 10.0.0
@@ -10594,12 +10594,12 @@ snapshots:
       '@mobily/ts-belt': 3.13.1
       '@noble/hashes': 1.7.2
       '@scure/bip39': 1.5.4
-      '@solana-program/compute-budget': 0.7.0(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
-      '@solana-program/system': 0.7.0(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
-      '@solana-program/token': 0.5.1(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
-      '@solana-program/token-2022': 0.4.2(@solana/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))
-      '@solana/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
-      '@trezor/blockchain-link': 2.5.0(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezoa-program/compute-budget': 0.7.0(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
+      '@trezoa-program/system': 0.7.0(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
+      '@trezoa-program/token': 0.5.1(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))
+      '@trezoa-program/token-2022': 0.4.2(@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)))(@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))
+      '@trezoa/kit': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@trezor/blockchain-link': 2.5.0(@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(ws@8.18.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       '@trezor/blockchain-link-types': 1.4.0(tslib@2.8.1)
       '@trezor/blockchain-link-utils': 1.4.0(bufferutil@4.0.9)(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)(utf-8-validate@5.0.10)
       '@trezor/connect-analytics': 1.3.3(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(tslib@2.8.1)
@@ -10619,7 +10619,7 @@ snapshots:
       cross-fetch: 4.1.0
       tslib: 2.8.1
     transitivePeerDependencies:
-      - '@solana/sysvars'
+      - '@trezoa/sysvars'
       - bufferutil
       - debug
       - encoding
@@ -11222,11 +11222,11 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@walletconnect/solana-adapter@0.0.8(@react-native-async-storage/async-storage@1.24.0(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
+  '@walletconnect/trezoa-adapter@0.0.8(@react-native-async-storage/async-storage@1.24.0(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(@trezoa/wallet-adapter-base@packages+core+base)(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
     dependencies:
       '@reown/appkit': 1.7.2(@react-native-async-storage/async-storage@1.24.0(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
-      '@solana/wallet-adapter-base': link:packages/core/base
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trezoa/wallet-adapter-base': link:packages/core/base
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@walletconnect/universal-provider': 2.19.0(@react-native-async-storage/async-storage@1.24.0(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       '@walletconnect/utils': 2.19.0(@react-native-async-storage/async-storage@1.24.0(react-native@0.79.1(@babel/core@7.26.10)(@types/react@19.1.7)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       bs58: 6.0.0
@@ -15130,10 +15130,10 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  salmon-adapter-sdk@1.1.1(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)):
+  salmon-adapter-sdk@1.1.1(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)):
     dependencies:
-      '@project-serum/sol-wallet-adapter': 0.2.6(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@project-serum/sol-wallet-adapter': 0.2.6(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       eventemitter3: 4.0.7
 
   saxes@6.0.0:

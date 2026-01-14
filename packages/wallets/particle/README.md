@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-particle`
+# `@trezoa/wallet-adapter-particle`
 
 <!-- @TODO -->
 

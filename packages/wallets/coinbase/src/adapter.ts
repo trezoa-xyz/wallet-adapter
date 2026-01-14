@@ -1,4 +1,4 @@
-import type { EventEmitter, SendTransactionOptions, WalletName } from '@solana/wallet-adapter-base';
+import type { EventEmitter, SendTransactionOptions, WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     isVersionedTransaction,
@@ -14,7 +14,7 @@ import {
     WalletReadyState,
     WalletSendTransactionError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
+} from '@trezoa/wallet-adapter-base';
 import type {
     Connection,
     SendOptions,
@@ -22,8 +22,8 @@ import type {
     VersionedTransaction,
     TransactionSignature,
     TransactionVersion,
-} from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface CoinbaseWalletEvents {
     connect(...args: unknown[]): unknown;
@@ -44,7 +44,7 @@ interface CoinbaseWallet extends EventEmitter<CoinbaseWalletEvents> {
 }
 
 interface CoinbaseWindow extends Window {
-    coinbaseSolana?: CoinbaseWallet;
+    coinbaseTrezoa?: CoinbaseWallet;
 }
 
 declare const window: CoinbaseWindow;
@@ -76,7 +76,7 @@ export class CoinbaseWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window?.coinbaseSolana) {
+                if (window?.coinbaseTrezoa) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -106,7 +106,7 @@ export class CoinbaseWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.coinbaseSolana!;
+            const wallet = window.coinbaseTrezoa!;
 
             try {
                 await wallet.connect();

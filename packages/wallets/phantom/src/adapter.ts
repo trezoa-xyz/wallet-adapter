@@ -1,4 +1,4 @@
-import type { EventEmitter, SendTransactionOptions, WalletName } from '@solana/wallet-adapter-base';
+import type { EventEmitter, SendTransactionOptions, WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     isIosAndRedirectable,
@@ -16,7 +16,7 @@ import {
     WalletSendTransactionError,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
+} from '@trezoa/wallet-adapter-base';
 import type {
     Connection,
     SendOptions,
@@ -24,8 +24,8 @@ import type {
     TransactionSignature,
     TransactionVersion,
     VersionedTransaction,
-} from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface PhantomWalletEvents {
     connect(...args: unknown[]): unknown;
@@ -50,9 +50,9 @@ interface PhantomWallet extends EventEmitter<PhantomWalletEvents> {
 
 interface PhantomWindow extends Window {
     phantom?: {
-        solana?: PhantomWallet;
+        trezoa?: PhantomWallet;
     };
-    solana?: PhantomWallet;
+    trezoa?: PhantomWallet;
 }
 
 declare const window: PhantomWindow;
@@ -89,7 +89,7 @@ export class PhantomWalletAdapter extends BaseMessageSignerWalletAdapter {
                 this.emit('readyStateChange', this._readyState);
             } else {
                 scopePollingDetectionStrategy(() => {
-                    if (window.phantom?.solana?.isPhantom || window.solana?.isPhantom) {
+                    if (window.phantom?.trezoa?.isPhantom || window.trezoa?.isPhantom) {
                         this._readyState = WalletReadyState.Installed;
                         this.emit('readyStateChange', this._readyState);
                         return true;
@@ -138,7 +138,7 @@ export class PhantomWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.phantom?.solana || window.solana!;
+            const wallet = window.phantom?.trezoa || window.trezoa!;
 
             if (!wallet.isConnected) {
                 try {

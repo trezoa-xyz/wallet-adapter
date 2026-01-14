@@ -11,8 +11,8 @@ import {
     type WalletName,
     WalletNotReadyError,
     WalletReadyState,
-} from '@solana/wallet-adapter-base';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import { PublicKey } from '@trezoa/web3.js';
 import React, { act, createRef, forwardRef, useImperativeHandle } from 'react';
 import { createRoot } from 'react-dom/client';
 import { useWallet, type WalletContextState } from '../useWallet.js';
@@ -295,7 +295,7 @@ describe('WalletProviderBase', () => {
                     renderTest({ adapter: fooWalletAdapter, onError: differentOnError });
                 });
                 it('does not cause state to be cleared when it changes', () => {
-                    // Regression test for https://github.com/anza-xyz/wallet-adapter/issues/636
+                    // Regression test for https://github.com/trezoa-xyz/wallet-adapter/issues/636
                     expect(ref.current?.getWalletContextState()).toMatchObject({
                         connected: true,
                     });

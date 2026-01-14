@@ -1,4 +1,4 @@
-import { BaseWalletAdapter, WalletReadyState } from '@solana/wallet-adapter-base';
+import { BaseWalletAdapter, WalletReadyState } from '@trezoa/wallet-adapter-base';
 import { act } from 'react';
 
 export abstract class MockWalletAdapter extends BaseWalletAdapter {

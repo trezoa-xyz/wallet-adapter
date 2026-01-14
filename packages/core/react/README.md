@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-react`
+# `@trezoa/wallet-adapter-react`
 
 ## Creating a custom connect button
 

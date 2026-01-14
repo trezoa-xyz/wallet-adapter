@@ -1,13 +1,13 @@
 import { createTheme, StyledEngineProvider, ThemeProvider } from '@mui/material';
 import { deepPurple, pink } from '@mui/material/colors';
-import type { Adapter, WalletError } from '@solana/wallet-adapter-base';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
-import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { UnsafeBurnerWalletAdapter } from '@solana/wallet-adapter-wallets';
-import { type SolanaSignInInput } from '@solana/wallet-standard-features';
-import { verifySignIn } from '@solana/wallet-standard-util';
-import { clusterApiUrl } from '@solana/web3.js';
+import type { Adapter, WalletError } from '@trezoa/wallet-adapter-base';
+import { WalletAdapterNetwork } from '@trezoa/wallet-adapter-base';
+import { ConnectionProvider, WalletProvider } from '@trezoa/wallet-adapter-react';
+import { WalletModalProvider } from '@trezoa/wallet-adapter-react-ui';
+import { UnsafeBurnerWalletAdapter } from '@trezoa/wallet-adapter-wallets';
+import { type TrezoaSignInInput } from '@trezoa/wallet-standard-features';
+import { verifySignIn } from '@trezoa/wallet-standard-util';
+import { clusterApiUrl } from '@trezoa/web3.js';
 import { SnackbarProvider, useSnackbar } from 'notistack';
 import React, { useCallback, useMemo, type FC, type ReactNode } from 'react';
 import { AutoConnectProvider, useAutoConnect } from './AutoConnectProvider';
@@ -61,14 +61,14 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
             /**
              * Wallets that implement either of these standards will be available automatically.
              *
-             *   - Solana Mobile Stack Mobile Wallet Adapter Protocol
-             *     (https://github.com/solana-mobile/mobile-wallet-adapter)
-             *   - Solana Wallet Standard
-             *     (https://github.com/solana-labs/wallet-standard)
+             *   - Trezoa Mobile Stack Mobile Wallet Adapter Protocol
+             *     (https://github.com/trezoa-mobile/mobile-wallet-adapter)
+             *   - Trezoa Wallet Standard
+             *     (https://github.com/trezoa-labs/wallet-standard)
              *
              * If you wish to support a wallet that supports neither of those standards,
              * instantiate its legacy wallet adapter here. Common legacy adapters can be found
-             * in the npm package `@solana/wallet-adapter-wallets`.
+             * in the npm package `@trezoa/wallet-adapter-wallets`.
              */
             new UnsafeBurnerWalletAdapter(),
         ],
@@ -88,7 +88,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const autoSignIn = useCallback(async (adapter: Adapter) => {
         if (!('signIn' in adapter)) return true;
 
-        const input: SolanaSignInInput = {
+        const input: TrezoaSignInInput = {
             domain: window.location.host,
             address: adapter.publicKey ? adapter.publicKey.toBase58() : undefined,
             statement: 'Please sign in.',

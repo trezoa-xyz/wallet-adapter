@@ -1,4 +1,4 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -10,11 +10,11 @@ import {
     WalletPublicKeyError,
     WalletReadyState,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction, TransactionVersion, VersionedTransaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction, TransactionVersion, VersionedTransaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
-interface SolanaNightly {
+interface TrezoaNightly {
     publicKey: PublicKey;
     connect(): Promise<PublicKey>;
     disconnect(): Promise<void>;
@@ -25,7 +25,7 @@ interface SolanaNightly {
 
 interface NightlyWindow extends Window {
     nightly?: {
-        solana?: SolanaNightly;
+        trezoa?: TrezoaNightly;
     };
 }
 
@@ -42,7 +42,7 @@ export class NightlyWalletAdapter extends BaseMessageSignerWalletAdapter {
 
     private _connecting: boolean;
     private _publicKey: PublicKey | null;
-    private _wallet: SolanaNightly | null;
+    private _wallet: TrezoaNightly | null;
     private _readyState: WalletReadyState =
         typeof window === 'undefined' || typeof document === 'undefined'
             ? WalletReadyState.Unsupported
@@ -56,7 +56,7 @@ export class NightlyWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window?.nightly?.solana) {
+                if (window?.nightly?.trezoa) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -86,7 +86,7 @@ export class NightlyWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.nightly!.solana!;
+            const wallet = window.nightly!.trezoa!;
 
             try {
                 await wallet.connect();

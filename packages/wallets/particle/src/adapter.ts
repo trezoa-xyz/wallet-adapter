@@ -1,5 +1,5 @@
-import type { ParticleNetwork, SolanaWallet } from '@particle-network/solana-wallet';
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { ParticleNetwork, TrezoaWallet } from '@particle-network/trezoa-wallet';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     WalletAccountError,
@@ -12,13 +12,13 @@ import {
     WalletReadyState,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { Transaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 export interface ParticleAdapterConfig {
     config?: ConstructorParameters<typeof ParticleNetwork>[0];
-    login?: Parameters<SolanaWallet['connect']>[0];
+    login?: Parameters<TrezoaWallet['connect']>[0];
 }
 
 export const ParticleName = 'Particle' as WalletName<'Particle'>;
@@ -31,7 +31,7 @@ export class ParticleAdapter extends BaseMessageSignerWalletAdapter {
     readonly supportedTransactionVersions = null;
 
     private _connecting: boolean;
-    private _wallet: SolanaWallet | null;
+    private _wallet: TrezoaWallet | null;
     private _publicKey: PublicKey | null;
     private _config: ParticleAdapterConfig;
     private _readyState: WalletReadyState =
@@ -52,7 +52,7 @@ export class ParticleAdapter extends BaseMessageSignerWalletAdapter {
                 appId: '',
                 ...config.config,
                 chainId: config.config?.chainId ?? 101,
-                chainName: config.config?.chainName ?? 'solana',
+                chainName: config.config?.chainName ?? 'trezoa',
             },
             login: config.login,
         };
@@ -82,10 +82,10 @@ export class ParticleAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             let ParticleClass: typeof ParticleNetwork;
-            let WalletClass: typeof SolanaWallet;
+            let WalletClass: typeof TrezoaWallet;
             try {
-                ({ ParticleNetwork: ParticleClass, SolanaWallet: WalletClass } = await import(
-                    '@particle-network/solana-wallet'
+                ({ ParticleNetwork: ParticleClass, TrezoaWallet: WalletClass } = await import(
+                    '@particle-network/trezoa-wallet'
                 ));
             } catch (error: any) {
                 throw new WalletLoadError(error?.message, error);
@@ -101,7 +101,7 @@ export class ParticleAdapter extends BaseMessageSignerWalletAdapter {
                 throw new WalletConfigError(error?.message, error);
             }
 
-            let wallet: SolanaWallet;
+            let wallet: TrezoaWallet;
             try {
                 wallet = new WalletClass(particle.auth);
             } catch (error: any) {

@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-keystone`
+# `@trezoa/wallet-adapter-keystone`
 
 <!-- @TODO -->
 

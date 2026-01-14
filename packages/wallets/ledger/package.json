@@ -1,8 +1,8 @@
 {
-    "name": "@solana/wallet-adapter-ledger",
+    "name": "@trezoa/wallet-adapter-ledger",
     "version": "0.9.29",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "author": "Trezoa Maintainers <maintainers@trezoa.foundation>",
+    "repository": "https://github.com/trezoa-xyz/wallet-adapter",
     "license": "Apache-2.0",
     "publishConfig": {
         "access": "public"
@@ -32,17 +32,17 @@
         "package": "shx mkdir -p lib/cjs && shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json"
     },
     "peerDependencies": {
-        "@solana/web3.js": "^1.98.0"
+        "@trezoa/web3.js": "^1.98.0"
     },
     "dependencies": {
         "@ledgerhq/devices": "^8.4.5",
         "@ledgerhq/hw-transport": "^6.31.5",
         "@ledgerhq/hw-transport-webhid": "^6.30.1",
-        "@solana/wallet-adapter-base": "workspace:^",
+        "@trezoa/wallet-adapter-base": "workspace:^",
         "buffer": "^6.0.3"
     },
     "devDependencies": {
-        "@solana/web3.js": "^1.98.2",
+        "@trezoa/web3.js": "^1.98.2",
         "@types/w3c-web-hid": "^1.0.6",
         "shx": "^0.4.0"
     },

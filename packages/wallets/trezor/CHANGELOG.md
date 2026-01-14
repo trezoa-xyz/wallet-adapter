@@ -1,4 +1,4 @@
-# @solana/wallet-adapter-trezor
+# @trezoa/wallet-adapter-trezor
 
 ## 0.1.6
 
@@ -6,7 +6,7 @@
 
 - 75bf350: Allow app to configure appName in Trezor adapter
 - Updated dependencies [75bf350]
-    - @solana/wallet-adapter-base@0.9.27
+    - @trezoa/wallet-adapter-base@0.9.27
 
 ## 0.1.5
 
@@ -14,7 +14,7 @@
 
 - db923f1: Use Node 20+ rather than 22
 - Updated dependencies [db923f1]
-    - @solana/wallet-adapter-base@0.9.26
+    - @trezoa/wallet-adapter-base@0.9.26
 
 ## 0.1.4
 
@@ -22,7 +22,7 @@
 
 - 27e408d: Update dependencies
 - Updated dependencies [27e408d]
-    - @solana/wallet-adapter-base@0.9.25
+    - @trezoa/wallet-adapter-base@0.9.25
 
 ## 0.1.3
 
@@ -33,7 +33,7 @@
 - f3721882: Update Trezor icon
 - c96cae47: The base version of Node has been raised to v20
 - Updated dependencies [c96cae47]
-    - @solana/wallet-adapter-base@0.9.24
+    - @trezoa/wallet-adapter-base@0.9.24
 
 ## 0.1.2
 

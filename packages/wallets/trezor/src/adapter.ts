@@ -1,4 +1,4 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
+import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseSignerWalletAdapter,
     WalletAccountError,
@@ -12,13 +12,13 @@ import {
     WalletReadyState,
     WalletSignTransactionError,
     isVersionedTransaction,
-} from '@solana/wallet-adapter-base';
-import type { Transaction, TransactionVersion, VersionedTransaction } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { Transaction, TransactionVersion, VersionedTransaction } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 import type {
     DeviceEventMessage,
-    SolanaPublicKey,
-    SolanaSignedTransaction,
+    TrezoaPublicKey,
+    TrezoaSignedTransaction,
     Success,
     TrezorConnect,
     Unsuccessful,
@@ -111,9 +111,9 @@ export class TrezorWalletAdapter extends BaseSignerWalletAdapter {
                 throw new WalletConfigError(error?.message, error);
             }
 
-            let result: Unsuccessful | Success<SolanaPublicKey>;
+            let result: Unsuccessful | Success<TrezoaPublicKey>;
             try {
-                result = await wallet.solanaGetPublicKey({ path: this._derivationPath });
+                result = await wallet.trezoaGetPublicKey({ path: this._derivationPath });
             } catch (error: any) {
                 throw new WalletAccountError(error?.message, error);
             }
@@ -169,9 +169,9 @@ export class TrezorWalletAdapter extends BaseSignerWalletAdapter {
                 ? transaction.message.serialize()
                 : transaction.serializeMessage();
 
-            let result: Unsuccessful | Success<SolanaSignedTransaction>;
+            let result: Unsuccessful | Success<TrezoaSignedTransaction>;
             try {
-                result = await wallet.solanaSignTransaction({
+                result = await wallet.trezoaSignTransaction({
                     path: this._derivationPath,
                     serializedTx: Buffer.from(serializedTransaction).toString('hex'),
                 });

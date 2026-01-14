@@ -1,4 +1,4 @@
-# @solana/wallet-adapter-base
+# @trezoa/wallet-adapter-base
 
 ## 0.9.27
 
@@ -28,7 +28,7 @@
 
 ### Patch Changes
 
-- a3d35a1: Add `signIn` (Sign In With Solana) method
+- a3d35a1: Add `signIn` (Sign In With Trezoa) method
 
 ## 0.9.22
 

@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-coinhub`
+# `@trezoa/wallet-adapter-coinhub`
 
 <!-- @TODO -->
 

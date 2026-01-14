@@ -1,5 +1,5 @@
-import { SolanaMobileWalletAdapterWalletName } from '@solana-mobile/wallet-adapter-mobile';
-import { type Adapter, WalletReadyState } from '@solana/wallet-adapter-base';
+import { TrezoaMobileWalletAdapterWalletName } from '@trezoa-mobile/wallet-adapter-mobile';
+import { type Adapter, WalletReadyState } from '@trezoa/wallet-adapter-base';
 
 export enum Environment {
     DESKTOP_WEB,
@@ -21,7 +21,7 @@ export default function getEnvironment({ adapters, userAgentString }: Config): E
     if (
         adapters.some(
             (adapter) =>
-                adapter.name !== SolanaMobileWalletAdapterWalletName &&
+                adapter.name !== TrezoaMobileWalletAdapterWalletName &&
                 adapter.readyState === WalletReadyState.Installed
         )
     ) {

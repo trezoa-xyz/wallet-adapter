@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-tokenary`
+# `@trezoa/wallet-adapter-tokenary`
 
 <!-- @TODO -->
 

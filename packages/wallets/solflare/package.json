@@ -1,8 +1,8 @@
 {
-    "name": "@solana/wallet-adapter-solflare",
+    "name": "@trezoa/wallet-adapter-trzflare",
     "version": "0.6.32",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "author": "Trezoa Maintainers <maintainers@trezoa.foundation>",
+    "repository": "https://github.com/trezoa-xyz/wallet-adapter",
     "license": "Apache-2.0",
     "publishConfig": {
         "access": "public"
@@ -32,17 +32,17 @@
         "package": "shx mkdir -p lib/cjs && shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json"
     },
     "peerDependencies": {
-        "@solana/web3.js": "^1.98.0"
+        "@trezoa/web3.js": "^1.98.0"
     },
     "dependencies": {
-        "@solana/wallet-adapter-base": "workspace:^",
-        "@solana/wallet-standard-chains": "^1.1.1",
-        "@solflare-wallet/metamask-sdk": "^1.0.3",
-        "@solflare-wallet/sdk": "^1.4.2",
+        "@trezoa/wallet-adapter-base": "workspace:^",
+        "@trezoa/wallet-standard-chains": "^1.1.1",
+        "@trzflare-wallet/metamask-sdk": "^1.0.3",
+        "@trzflare-wallet/sdk": "^1.4.2",
         "@wallet-standard/wallet": "^1.1.0"
     },
     "devDependencies": {
-        "@solana/web3.js": "^1.98.2",
+        "@trezoa/web3.js": "^1.98.2",
         "shx": "^0.4.0"
     }
 }

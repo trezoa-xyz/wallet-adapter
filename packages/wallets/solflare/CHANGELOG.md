@@ -1,4 +1,4 @@
-# @solana/wallet-adapter-solflare
+# @trezoa/wallet-adapter-trzflare
 
 ## 0.6.32
 
@@ -8,7 +8,7 @@
 - fe81e05: Update Solflare logo
 - 75bf350: Update dependencies
 - Updated dependencies [75bf350]
-    - @solana/wallet-adapter-base@0.9.27
+    - @trezoa/wallet-adapter-base@0.9.27
 
 ## 0.6.31
 
@@ -16,7 +16,7 @@
 
 - db923f1: Use Node 20+ rather than 22
 - Updated dependencies [db923f1]
-    - @solana/wallet-adapter-base@0.9.26
+    - @trezoa/wallet-adapter-base@0.9.26
 
 ## 0.6.30
 
@@ -24,7 +24,7 @@
 
 - 27e408d: Update dependencies
 - Updated dependencies [27e408d]
-    - @solana/wallet-adapter-base@0.9.25
+    - @trezoa/wallet-adapter-base@0.9.25
 
 ## 0.6.29
 
@@ -32,7 +32,7 @@
 
 - c96cae47: The base version of Node has been raised to v20
 - Updated dependencies [c96cae47]
-    - @solana/wallet-adapter-base@0.9.24
+    - @trezoa/wallet-adapter-base@0.9.24
 
 ## 0.6.28
 
@@ -51,7 +51,7 @@
 ### Patch Changes
 
 - Updated dependencies [a3d35a1]
-    - @solana/wallet-adapter-base@0.9.23
+    - @trezoa/wallet-adapter-base@0.9.23
 
 ## 0.6.25
 
@@ -65,14 +65,14 @@
 
 - 8a8fdc72: Update dependencies
 - Updated dependencies [8a8fdc72]
-    - @solana/wallet-adapter-base@0.9.22
+    - @trezoa/wallet-adapter-base@0.9.22
 
 ## 0.6.23
 
 ### Patch Changes
 
 - Updated dependencies [f99c2154]
-    - @solana/wallet-adapter-base@0.9.21
+    - @trezoa/wallet-adapter-base@0.9.21
 
 ## 0.6.22
 
@@ -91,11 +91,11 @@
 ### Patch Changes
 
 - Updated dependencies [912cc0e]
-    - @solana/wallet-adapter-base@0.9.20
+    - @trezoa/wallet-adapter-base@0.9.20
 
 ## 0.6.19
 
 ### Patch Changes
 
 - Updated dependencies [353f2a5]
-    - @solana/wallet-adapter-base@0.9.19
+    - @trezoa/wallet-adapter-base@0.9.19

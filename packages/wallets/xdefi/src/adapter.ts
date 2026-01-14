@@ -1,4 +1,4 @@
-import type { EventEmitter, WalletName } from '@solana/wallet-adapter-base';
+import type { EventEmitter, WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
     scopePollingDetectionStrategy,
@@ -12,9 +12,9 @@ import {
     WalletReadyState,
     WalletSignMessageError,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
-import type { SendOptions, Transaction, TransactionSignature } from '@solana/web3.js';
-import { PublicKey } from '@solana/web3.js';
+} from '@trezoa/wallet-adapter-base';
+import type { SendOptions, Transaction, TransactionSignature } from '@trezoa/web3.js';
+import { PublicKey } from '@trezoa/web3.js';
 
 interface XDEFIWalletEvents {
     connect(...args: unknown[]): unknown;
@@ -38,7 +38,7 @@ interface XDEFIWallet extends EventEmitter<XDEFIWalletEvents> {
 
 interface XDEFIWalletWindow extends Window {
     xfi?: {
-        solana?: XDEFIWallet;
+        trezoa?: XDEFIWallet;
     };
 }
 
@@ -71,7 +71,7 @@ export class XDEFIWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.xfi?.solana?.isXDEFI) {
+                if (window.xfi?.trezoa?.isXDEFI) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -105,7 +105,7 @@ export class XDEFIWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.xfi!.solana!;
+            const wallet = window.xfi!.trezoa!;
 
             if (!wallet.isConnected) {
                 try {
