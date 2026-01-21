@@ -86,7 +86,7 @@ import { useConnection, useWallet } from '@trezoa/wallet-adapter-react';
 import { Keypair, SystemProgram, Transaction } from '@trezoa/web3.js';
 import React, { FC, useCallback } from 'react';
 
-export const SendSOLToRandomAddress: FC = () => {
+export const SendTRZToRandomAddress: FC = () => {
     const { connection } = useConnection();
     const { publicKey, sendTransaction } = useWallet();
 
@@ -116,7 +116,7 @@ export const SendSOLToRandomAddress: FC = () => {
 
     return (
         <button onClick={onClick} disabled={!publicKey}>
-            Send SOL to a random address!
+            Send TRZ to a random address!
         </button>
     );
 };

@@ -51,7 +51,7 @@ export class SolongWalletAdapter extends BaseSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window.solong) {
+                if (window.trzong) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -85,7 +85,7 @@ export class SolongWalletAdapter extends BaseSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.solong!;
+            const wallet = window.trzong!;
 
             let account: string;
             try {

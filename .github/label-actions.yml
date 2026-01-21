@@ -13,7 +13,7 @@ question:
 
 
       Questions like yours deserve a purpose-built Q & A forum. Unless there exists evidence that this is a bug with
-      Wallet Adapter itself, please post your question to the Solana Stack Exchange using this link:
+      Wallet Adapter itself, please post your question to the trezoa Stack Exchange using this link:
 
 
       https://trezoa.stackexchange.com/questions/ask
@@ -44,7 +44,7 @@ use-wallet-standard:
 
 
       However, most of what you've written for this adapter is portable to the Wallet Standard interface, and
-      implementing this interface will grant your wallet distribution on dapps across Solana. After reading the guide
+      implementing this interface will grant your wallet distribution on dapps across trezoa. After reading the guide
       and looking at the reference implementations, if you have questions on how to do this, please open an issue here:
 
 

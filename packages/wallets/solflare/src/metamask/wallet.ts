@@ -1,5 +1,5 @@
 import { WalletNotConnectedError } from '@trezoa/wallet-adapter-base';
-import { SOLANA_DEVNET_CHAIN, SOLANA_MAINNET_CHAIN, SOLANA_TESTNET_CHAIN } from '@trezoa/wallet-standard-chains';
+import { trezoa_DEVNET_CHAIN, trezoa_MAINNET_CHAIN, trezoa_TESTNET_CHAIN } from '@trezoa/wallet-standard-chains';
 import {
     TrezoaSignAndSendTransaction,
     type TrezoaSignAndSendTransactionFeature,
@@ -49,7 +49,7 @@ export class SolflareMetaMaskWallet implements Wallet {
     }
 
     get chains() {
-        return [SOLANA_MAINNET_CHAIN, SOLANA_DEVNET_CHAIN, SOLANA_TESTNET_CHAIN] as const;
+        return [trezoa_MAINNET_CHAIN, trezoa_DEVNET_CHAIN, trezoa_TESTNET_CHAIN] as const;
     }
 
     get features(): StandardConnectFeature &

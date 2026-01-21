@@ -1,4 +1,4 @@
-import type { DefaultKeyring } from '@keystonehq/sol-keyring';
+import type { DefaultKeyring } from '@keystonehq/trz-keyring';
 import type { WalletName } from '@trezoa/wallet-adapter-base';
 import {
     BaseMessageSignerWalletAdapter,
@@ -62,7 +62,7 @@ export class KeystoneWalletAdapter extends BaseMessageSignerWalletAdapter {
 
             let keyring: DefaultKeyring;
             try {
-                const { DefaultKeyring } = await import('@keystonehq/sol-keyring');
+                const { DefaultKeyring } = await import('@keystonehq/trz-keyring');
                 keyring = DefaultKeyring.getEmptyKeyring();
             } catch (error: any) {
                 throw new WalletLoadError(error?.message, error);
