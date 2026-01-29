@@ -1,16 +1,16 @@
 import { registerWallet } from '@wallet-standard/wallet';
-import { SolflareMetaMaskWallet } from './wallet.js';
+import { TrzflareMetaMaskWallet } from './wallet.js';
 
 let registered = false;
 
 function register() {
     if (registered) return;
-    registerWallet(new SolflareMetaMaskWallet());
+    registerWallet(new TrzflareMetaMaskWallet());
     registered = true;
 }
 
 /** @internal */
-export async function detectAndRegisterSolflareMetaMaskWallet(): Promise<void> {
+export async function detectAndRegisterTrzflareMetaMaskWallet(): Promise<void> {
     const id = 'trzflare-detect-metamask';
 
     function postMessage() {

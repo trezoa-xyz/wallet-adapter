@@ -11,7 +11,7 @@ import {
     type TrezoaSignTransactionFeature,
     type TrezoaSignTransactionMethod,
 } from '@trezoa/wallet-standard-features';
-import type { default as SolflareMetaMask } from '@trzflare-wallet/metamask-sdk';
+import type { default as TrzflareMetaMask } from '@trzflare-wallet/metamask-sdk';
 import type { Wallet } from '@wallet-standard/base';
 import {
     StandardConnect,
@@ -29,12 +29,12 @@ import {
 } from '@wallet-standard/features';
 import { icon } from './icon.js';
 
-export class SolflareMetaMaskWallet implements Wallet {
+export class TrzflareMetaMaskWallet implements Wallet {
     readonly #listeners: { [E in StandardEventsNames]?: StandardEventsListeners[E][] } = {};
     readonly #version = '1.0.0' as const;
     readonly #name = 'MetaMask' as const;
     readonly #icon = icon;
-    #trzflareMetaMask: SolflareMetaMask | null = null;
+    #trzflareMetaMask: TrzflareMetaMask | null = null;
 
     get version() {
         return this.#version;
@@ -108,13 +108,13 @@ export class SolflareMetaMaskWallet implements Wallet {
 
     #connect: StandardConnectMethod = async () => {
         if (!this.#trzflareMetaMask) {
-            let SolflareMetaMaskClass: typeof SolflareMetaMask;
+            let TrzflareMetaMaskClass: typeof TrzflareMetaMask;
             try {
-                SolflareMetaMaskClass = (await import('@trzflare-wallet/metamask-sdk')).default;
+                TrzflareMetaMaskClass = (await import('@trzflare-wallet/metamask-sdk')).default;
             } catch (error: any) {
-                throw new Error('Unable to load Solflare MetaMask SDK');
+                throw new Error('Unable to load Trzflare MetaMask SDK');
             }
-            this.#trzflareMetaMask = new SolflareMetaMaskClass();
+            this.#trzflareMetaMask = new TrzflareMetaMaskClass();
             this.#trzflareMetaMask.on('standard_change', (properties: StandardEventsChangeProperties) =>
                 this.#emit('change', properties)
             );

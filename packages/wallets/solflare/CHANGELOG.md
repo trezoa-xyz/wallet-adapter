@@ -4,8 +4,8 @@
 
 ### Patch Changes
 
-- 4dad1a9: Update Solflare logo
-- fe81e05: Update Solflare logo
+- 4dad1a9: Update Trzflare logo
+- fe81e05: Update Trzflare logo
 - 75bf350: Update dependencies
 - Updated dependencies [75bf350]
     - @trezoa/wallet-adapter-base@0.9.27
@@ -38,13 +38,13 @@
 
 ### Patch Changes
 
-- 3d2e0cd5: Optimize Solflare MetaMask snap detection
+- 3d2e0cd5: Optimize Trzflare MetaMask snap detection
 
 ## 0.6.27
 
 ### Patch Changes
 
-- a4566f89: Add Solflare MetaMask Snap support
+- a4566f89: Add Trzflare MetaMask Snap support
 
 ## 0.6.26
 
@@ -57,7 +57,7 @@
 
 ### Patch Changes
 
-- e5024dc: Support `signAndSendTransaction` method in Solflare adapter
+- e5024dc: Support `signAndSendTransaction` method in Trzflare adapter
 
 ## 0.6.24
 
@@ -78,13 +78,13 @@
 
 ### Patch Changes
 
-- b4558126: Add support for redirecting to Solflare browser on iOS
+- b4558126: Add support for redirecting to Trzflare browser on iOS
 
 ## 0.6.21
 
 ### Patch Changes
 
-- 21d2c863: Add support for `accountChanged` event to Solflare adapter
+- 21d2c863: Add support for `accountChanged` event to Trzflare adapter
 
 ## 0.6.20
 

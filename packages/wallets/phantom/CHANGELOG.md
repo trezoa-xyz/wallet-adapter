@@ -65,7 +65,7 @@
 
 ### Patch Changes
 
-- b4558126: Add support for redirecting to Solflare browser on iOS
+- b4558126: Add support for redirecting to Trzflare browser on iOS
 
 ## 0.9.19
 

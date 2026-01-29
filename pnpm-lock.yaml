@@ -475,7 +475,7 @@ importers:
 
   packages/wallets/keystone:
     dependencies:
-      '@keystonehq/sol-keyring':
+      '@keystonehq/trz-keyring':
         specifier: ^0.20.0
         version: 0.20.0(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@trezoa/wallet-adapter-base':
@@ -1621,7 +1621,7 @@ packages:
   '@keystonehq/alias-sampling@0.1.2':
     resolution: {integrity: sha512-5ukLB3bcgltgaFfQfYKYwHDUbwHicekYo53fSEa7xhVkAEqsA74kxdIwoBIURmGUtXe3EVIRm4SYlgcrt2Ri0w==}
 
-  '@keystonehq/bc-ur-registry-sol@0.9.5':
+  '@keystonehq/bc-ur-registry-trz@0.9.5':
     resolution: {integrity: sha512-HZeeph9297ZHjAziE9wL/u2W1dmV0p1H9Bu9g1bLJazP4F6W2fjCK9BAoCiKEsMBqadk6KI6r6VD67fmDzWyug==}
 
   '@keystonehq/bc-ur-registry@0.5.4':
@@ -1636,7 +1636,7 @@ packages:
       react: '*'
       react-dom: '*'
 
-  '@keystonehq/sol-keyring@0.20.0':
+  '@keystonehq/trz-keyring@0.20.0':
     resolution: {integrity: sha512-UBeMlecybTDQaFMI951LBEVRyZarqKHOcwWqqvphV+x7WquYz0SZ/wf/PhizV0MWoGTQwt2m5aqROzksi6svqw==}
 
   '@ledgerhq/devices@8.4.6':
@@ -2361,7 +2361,7 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
-  '@project-serum/sol-wallet-adapter@0.2.6':
+  '@project-serum/trz-wallet-adapter@0.2.6':
     resolution: {integrity: sha512-cpIb13aWPW8y4KzkZAPDgw+Kb+DXjCC6rZoH74MGm3I/6e/zKyGnfAuW5olb2zxonFqsYgnv7ev8MQnvSgJ3/g==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -8221,7 +8221,7 @@ snapshots:
 
   '@keystonehq/alias-sampling@0.1.2': {}
 
-  '@keystonehq/bc-ur-registry-sol@0.9.5':
+  '@keystonehq/bc-ur-registry-trz@0.9.5':
     dependencies:
       '@keystonehq/bc-ur-registry': 0.7.0
       bs58check: 2.1.2
@@ -8249,10 +8249,10 @@ snapshots:
       react-qr-reader: 2.2.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       rxjs: 6.6.7
 
-  '@keystonehq/sol-keyring@0.20.0(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@keystonehq/trz-keyring@0.20.0(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@keystonehq/bc-ur-registry': 0.5.4
-      '@keystonehq/bc-ur-registry-sol': 0.9.5
+      '@keystonehq/bc-ur-registry-trz': 0.9.5
       '@keystonehq/sdk': 0.19.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       bs58: 5.0.0
@@ -9365,7 +9365,7 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@project-serum/sol-wallet-adapter@0.2.6(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@project-serum/trz-wallet-adapter@0.2.6(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       bs58: 4.0.1
@@ -15132,7 +15132,7 @@ snapshots:
 
   salmon-adapter-sdk@1.1.1(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)):
     dependencies:
-      '@project-serum/sol-wallet-adapter': 0.2.6(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@project-serum/trz-wallet-adapter': 0.2.6(@trezoa/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
       '@trezoa/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       eventemitter3: 4.0.7
 
