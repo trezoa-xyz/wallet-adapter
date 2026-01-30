@@ -11,7 +11,7 @@ const App = () => {
               network,
               options: {
                   relayUrl: 'wss://relay.walletconnect.com',
-                  // example WC app project ID
+                  // example WC app trezoa ID
                   projectId: 'e899c82be21d4acca2c8aec45e893598',
                   metadata: {
                       name: 'Example App',

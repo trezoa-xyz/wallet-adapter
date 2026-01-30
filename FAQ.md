@@ -26,7 +26,7 @@ After reading this FAQ, if you've found a bug or if you'd like to request a feat
 
 ### `Failed to compile. [...] Module not found: Can't resolve [...]`
 
-This can happen if you're cloning the project and [building it from the source](https://github.com/trezoa-xyz/wallet-adapter/blob/master/README.md#build-from-source) and you missed a step.
+This can happen if you're cloning the trezoa and [building it from the source](https://github.com/trezoa-xyz/wallet-adapter/blob/master/README.md#build-from-source) and you missed a step.
 
 If this doesn't fix the problem, please [open an issue](https://github.com/trezoa-xyz/wallet-adapter/issues/new).
 

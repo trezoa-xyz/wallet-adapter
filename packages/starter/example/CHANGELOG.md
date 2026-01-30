@@ -170,7 +170,7 @@
 
 ### Patch Changes
 
-- 3b93799: Fix next.js warnings when building starter project
+- 3b93799: Fix next.js warnings when building starter trezoa
 
 ## 0.18.20
 
@@ -222,8 +222,8 @@
 
 - 5d016a2: Mobile Wallet Adapter and Wallet Standard support in `@trezoa/wallet-adapter-react`
 
-    - Early Access + Upgrade Guide: https://github.com/trezoa-labs/wallet-adapter/issues/604
-    - Changes in this release: https://github.com/trezoa-labs/wallet-adapter/pull/598
+    - Early Access + Upgrade Guide: https://github.com/trezoa-team/wallet-adapter/issues/604
+    - Changes in this release: https://github.com/trezoa-team/wallet-adapter/pull/598
 
 - Updated dependencies [5d016a2]
     - @trezoa/wallet-adapter-react@0.15.22

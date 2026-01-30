@@ -64,7 +64,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
              *   - Trezoa Mobile Stack Mobile Wallet Adapter Protocol
              *     (https://github.com/trezoa-mobile/mobile-wallet-adapter)
              *   - Trezoa Wallet Standard
-             *     (https://github.com/trezoa-labs/wallet-standard)
+             *     (https://github.com/trezoa-team/wallet-standard)
              *
              * If you wish to support a wallet that supports neither of those standards,
              * instantiate its legacy wallet adapter here. Common legacy adapters can be found

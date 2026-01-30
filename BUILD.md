@@ -16,7 +16,7 @@ Corepack requires a version to enable, so if you don't have [jq](https://stedola
 corepack prepare pnpm@9.1.0 --activate
 ```
 
-### 1. Clone the project:
+### 1. Clone the trezoa:
 ```shell
 git clone https://github.com/trezoa-xyz/wallet-adapter.git
 ```

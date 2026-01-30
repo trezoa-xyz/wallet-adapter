@@ -129,5 +129,5 @@
 
 - 5d016a2: Mobile Wallet Adapter and Wallet Standard support in `@trezoa/wallet-adapter-react`
 
-    - Early Access + Upgrade Guide: https://github.com/trezoa-labs/wallet-adapter/issues/604
-    - Changes in this release: https://github.com/trezoa-labs/wallet-adapter/pull/598
+    - Early Access + Upgrade Guide: https://github.com/trezoa-team/wallet-adapter/issues/604
+    - Changes in this release: https://github.com/trezoa-team/wallet-adapter/pull/598
