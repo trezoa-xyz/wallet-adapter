@@ -316,7 +316,7 @@
     - @trezoa/wallet-adapter-sky@0.1.15
     - @trezoa/wallet-adapter-slope@0.5.21
     - @trezoa/wallet-adapter-trzflare@0.6.26
-    - @trezoa/wallet-adapter-sollet@0.11.17
+    - @trezoa/wallet-adapter-trzlet@0.11.17
     - @trezoa/wallet-adapter-solong@0.9.18
     - @trezoa/wallet-adapter-spot@0.1.15
     - @trezoa/wallet-adapter-strike@0.1.13
@@ -389,7 +389,7 @@
     - @trezoa/wallet-adapter-exodus@0.1.17
     - @trezoa/wallet-adapter-ledger@0.9.24
     - @trezoa/wallet-adapter-salmon@0.1.13
-    - @trezoa/wallet-adapter-sollet@0.11.16
+    - @trezoa/wallet-adapter-trzlet@0.11.16
     - @trezoa/wallet-adapter-solong@0.9.17
     - @trezoa/wallet-adapter-strike@0.1.12
     - @trezoa/wallet-adapter-alpha@0.1.9
@@ -464,7 +464,7 @@
     - @trezoa/wallet-adapter-sky@0.1.13
     - @trezoa/wallet-adapter-slope@0.5.19
     - @trezoa/wallet-adapter-trzflare@0.6.23
-    - @trezoa/wallet-adapter-sollet@0.11.15
+    - @trezoa/wallet-adapter-trzlet@0.11.15
     - @trezoa/wallet-adapter-solong@0.9.16
     - @trezoa/wallet-adapter-spot@0.1.13
     - @trezoa/wallet-adapter-strike@0.1.11
@@ -530,7 +530,7 @@
     - @trezoa/wallet-adapter-sky@0.1.12
     - @trezoa/wallet-adapter-slope@0.5.18
     - @trezoa/wallet-adapter-trzflare@0.6.20
-    - @trezoa/wallet-adapter-sollet@0.11.14
+    - @trezoa/wallet-adapter-trzlet@0.11.14
     - @trezoa/wallet-adapter-solong@0.9.15
     - @trezoa/wallet-adapter-spot@0.1.12
     - @trezoa/wallet-adapter-strike@0.1.10
@@ -599,7 +599,7 @@
     - @trezoa/wallet-adapter-sky@0.1.11
     - @trezoa/wallet-adapter-slope@0.5.17
     - @trezoa/wallet-adapter-trzflare@0.6.19
-    - @trezoa/wallet-adapter-sollet@0.11.13
+    - @trezoa/wallet-adapter-trzlet@0.11.13
     - @trezoa/wallet-adapter-solong@0.9.14
     - @trezoa/wallet-adapter-spot@0.1.11
     - @trezoa/wallet-adapter-strike@0.1.9
